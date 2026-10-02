@@ -1,0 +1,29 @@
+defaults:
+  table_style: overall
+  aligned_columns: false
+  stacked_curves: false
+  panel_gap_mm: 6
+  curve_height_mm: 42
+  assay_height_mm: 82
+presets:
+  compact:
+    title: Compact columns
+    description: Closest to the original, with the composition table directly below the flow.
+  section_bands:
+    title: Section bands
+    description: Pale bands distinguish patient, blood-test and recurrence sections.
+    table_style: bands
+  open_table:
+    title: Open table
+    description: Minimal shading, bold totals and a little more space between panels.
+    table_style: plain
+    panel_gap_mm: 8
+  aligned_columns:
+    title: Aligned columns
+    description: Taller diagnosis-year plot and aligned composition and source-table headings.
+    aligned_columns: true
+  stacked_curves:
+    title: Full-width curves
+    description: Incidence and survival each span the page, giving annual values more room.
+    stacked_curves: true
+    curve_height_mm: 44

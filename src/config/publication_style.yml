@@ -1,0 +1,52 @@
+manuscript:
+  text_width_tex_pt: 517.84052
+  width_fractions:
+    dataset_statistics: 0.85
+    recurrence_blood_test_trajectories: 0.96
+    ebm_top_features: 0.48
+typography:
+  family: DejaVu Sans
+  reference_figure: ebm_top_features
+  reference_export_width_inches: 10.32
+  scale: 1.45
+  reference_sizes:
+    figure_title: 12
+    site_label: 10
+    panel_title: 12
+    axis_label: 8
+    tick_label: 7
+    legend: 8
+    table: 7
+colors:
+  text: '#202830'
+  secondary: '#586572'
+  border: '#72808b'
+  grid: '#e6e9ec'
+  row: '#f5f7f9'
+  retained: '#edf3f7'
+  excluded: '#fcf2e9'
+  included: '#eaf5ed'
+  overall: '#262626'
+  outside_reference: '#9C6800'
+  outside_reference_fill: '#E69F00'
+sites:
+  Bone: '#0072B2'
+  Brain: '#D55E00'
+  Liver: '#009E73'
+  Lung: '#CC79A7'
+  Other: '#E69F00'
+reference_groups:
+  Female adult reference: '#456b86'
+  Male adult reference: '#772222'
+  Female <40 years reference: '#b5a000'
+  Male <40 years reference: '#34b234'
+  Female ≥40 years reference: '#a05a00'
+  Male ≥40 years reference: '#223777'
+  Female 18-39 years reference: '#d161d1'
+  Male 18-39 years reference: '#b23473'
+  Female 40-69 years reference: '#168aad'
+  Male 40-69 years reference: '#7dd161'
+  Female 18-69 years reference: '#7334b2'
+  Male 18-69 years reference: '#436039'
+  Female ≥70 years reference: '#b28080'
+  Male ≥70 years reference: '#61d1b5'

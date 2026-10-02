@@ -1,0 +1,70 @@
+source: {}
+dataset:
+  include_diagnosis_age: true
+  require_diagnosis_age: true
+  include_time_since_diagnosis: true
+  include_blood_test_change: false
+  blood_test_change_min_days: 90
+  blood_test_change_max_days: 540
+  include_recent_diagnoses: false
+  include_landmark_day_recent_diagnoses: false
+  restrict_bloodtests_to_bc_diagnosis_window: false
+  training_sample_weighting: person_uniform
+  bootstrap_sample_weighting: person_uniform
+  test_bootstrap_runs: 1000
+  min_blood_test_types_per_day: 13
+ebm:
+  n_jobs: 4
+  max_bins: 16
+imputation:
+  enabled: true
+benchmark:
+  write_risk_scores: true
+  resume: true
+  washout_cohort_counts:
+    table_label: tab:washout_cohort_counts
+  brier:
+    enabled: true
+    competing_method: matching_cox_ebm
+  ebm_top_features: {}
+  washout:
+    days:
+    - 0
+    - 30
+    - 60
+    - 90
+    table_caption: Test C-index by Endpoint Site, Censoring Horizon, and pre-boundary blood-test washout for saved
+      EBM models. Two-sided 95\% bootstrap percentile confidence intervals are shown. In each column, bold indicates
+      the highest mean C-index and underline the second-highest distinct mean C-index. A blood-test model is italicized
+      when its one-sided 95\% lower bootstrap bound is above 0.5 and its paired C-index difference from the clinical
+      baseline also has a one-sided 95\% lower bound above zero. The clinical baseline is never italicized.
+    table_label: tab:cindex_benchmark_individual_blood_tests_washout
+  include_all_blood_tests: true
+  clinical_baseline_label: Clinical baseline
+  all_blood_tests_label: All blood tests
+  table_caption: Test C-index by organ and censoring horizon for EBM models. The clinical baseline uses diagnosis
+    age and time since diagnosis; blood-test models add their indicated test(s) to both baseline features. Two-sided
+    95\% bootstrap percentile confidence intervals are shown. In each column, bold indicates the highest mean C-index
+    and underline the second-highest distinct mean C-index. A blood-test model is italicized when its one-sided
+    95\% lower bootstrap bound is above 0.5 and its paired C-index difference from the clinical baseline also has
+    a one-sided 95\% lower bound above zero. The clinical baseline is never italicized.
+  table_label: tab:cindex_benchmark_individual_blood_tests
+  horizons:
+  - label: 6m
+    days: 180
+  sites:
+  - label: All
+    recurrence_endpoint_name: distant_recurrence
+    endpoint_ddfs_code_filter_regex: (?:C78\d*)|(?:C79\d*)
+  - label: Bone
+    recurrence_endpoint_name: bone_recurrence
+    endpoint_ddfs_code_filter_regex: C795\d*
+  - label: Brain
+    recurrence_endpoint_name: brain_recurrence
+    endpoint_ddfs_code_filter_regex: C793\d*
+  - label: Liver
+    recurrence_endpoint_name: liver_recurrence
+    endpoint_ddfs_code_filter_regex: C787\d*
+  - label: Lung
+    recurrence_endpoint_name: lung_recurrence
+    endpoint_ddfs_code_filter_regex: C780\d*

@@ -1,0 +1,108 @@
+{
+  "reference": "Manuscript working tree, 2026-10-02; original figures and inline tables, not an older generated bundle.",
+  "comparison": "SVG: metadata/IDs/indentation normalized; TeX: single tabular body with whitespace removed.",
+  "artifacts": {
+    "figure/dataset_statistics.svg": {
+      "comparison_sha256": "693f2cca9e1a50fa72ec26d2bf6247bd6779ece1badea77096e3b92ba544a774",
+      "source_sha256": "31eb0bb0a2a599e0257bfe1c98d17fd22b213be4abffa375e5747a012e0b82e1"
+    },
+    "figure/ebm_top_features.svg": {
+      "comparison_sha256": "cd795d303c282f6346abbb88a88df9fa826cc06795bc24960464767784ab6729",
+      "source_sha256": "dbb784bbcdab74486f56c30f2f9fedfdc80e9c01fc886b0f2d7894aeba39a2f2"
+    },
+    "figure/global_importance.svg": {
+      "comparison_sha256": "707dee48d6b285dd86c1b8bd03c3b456206dc3f3a94548969ea43ee3fda759f2",
+      "source_sha256": "be16662e8c76500df201d807e995b84e95b22730d4ce43f822fd2e4e2edb4e46"
+    },
+    "figure/global_importance_bone.svg": {
+      "comparison_sha256": "94f6eb085acb6b95a42de4833065d7cfb01dc8d2e00d1b1a34953ef77d106300",
+      "source_sha256": "1ba61a4227da7f481cc3eb06c08af64a8d35c9e4b948624d4d8e6cdc6ba2975c"
+    },
+    "figure/global_importance_brain.svg": {
+      "comparison_sha256": "51f38de9f7a6909f82b227c15856d0ee7489a23bc999f908141fc2554ddb6f4a",
+      "source_sha256": "a3eadf4bff0a074233574ec5a750fcd2a2c0fe8fdaf511a4d87405ab3569de45"
+    },
+    "figure/global_importance_liver.svg": {
+      "comparison_sha256": "33a32db1dd1cb76a570bc2e7fe7f953b697de486be649ddc41ed4519776cdd03",
+      "source_sha256": "ee1d7d3c9e1cc3399addf26fdcaf02019817b01078560924ca25c22f1fcc7970"
+    },
+    "figure/global_importance_lung.svg": {
+      "comparison_sha256": "308e213a57658a230de69cafe68592cf833e1316e579f3c2af3b485966d4003d",
+      "source_sha256": "0c32f956b6ed01d62278fa7b36ff72f62330d78a8b6a9526a7d4b385788cf858"
+    },
+    "figure/recurrence_blood_test_trajectories.svg": {
+      "comparison_sha256": "8c22f66421eb9e7a72a90b68bd156baffeb4230e7d083151aa4ef2d0f4e641ba",
+      "source_sha256": "253c0250d72d06f073c0823437f0a2943c11ebb5a92f8d4c141addad22fea94b"
+    },
+    "figure/recurrence_blood_test_trajectories_any.svg": {
+      "comparison_sha256": "0eee49177d6ff76753ac723e495633fecaede007c04d799132f4dd5e3653c91b",
+      "source_sha256": "73534e474636726a11e8375b8f3cb336329ba5d108fce08c768c5f7ad1444555"
+    },
+    "figure/recurrence_blood_test_trajectories_bone.svg": {
+      "comparison_sha256": "9b0917ae5d4caaa8bcaa6ffe896ee438a7ac1732253a83842de05f870e7a26bc",
+      "source_sha256": "734eb395a7dbf343d49ef25aee541946d2832d5d3e3aa6c91e0f6a6928ba3407"
+    },
+    "figure/recurrence_blood_test_trajectories_brain.svg": {
+      "comparison_sha256": "a7ebfbf6d9f86eaf985846d36eef06d5bca7a50a66ee26aac970dfa584ad770d",
+      "source_sha256": "e2c19569fcb0927d703f0e475cf8e6cf07ecb9aff597d4108c20a6a5dd635859"
+    },
+    "figure/recurrence_blood_test_trajectories_liver.svg": {
+      "comparison_sha256": "a1bc1948df1e2e1907bcdf6bf286ecadb5ae89f1b0244d35e8ea00da504eb270",
+      "source_sha256": "e9cd7cfee99c38e666bd7dd942d86889ceaec7feddce4a2c13b9792dc72b52e9"
+    },
+    "figure/recurrence_blood_test_trajectories_lung.svg": {
+      "comparison_sha256": "6acb6cb5d566ad3afb1199fe09e27ad57de8471a76489360b7c248284a72b484",
+      "source_sha256": "5d7b9a960d99054edbb8f10f01d27f43016e9875debfa93a706bae0751fa3ea8"
+    },
+    "figure/terms_hazard_ratio_grid.svg": {
+      "comparison_sha256": "3d58a0e373d78ba3318fae1157903c65883c5f7f9d9598b1b917869736dccee1",
+      "source_sha256": "a536e10883ce955fb7da5e7c35093765f3cf4dda70ba550270b01973425ac11d"
+    },
+    "figure/terms_hazard_ratio_grid_bone.svg": {
+      "comparison_sha256": "881084f6b393693ebfb2152bdeca1b58ed816d95db85726271dca4612726a6c7",
+      "source_sha256": "6fc67fd684693a055eef48444b8fa6f6cc25e9f349841a6dcc54800298eef91e"
+    },
+    "figure/terms_hazard_ratio_grid_brain.svg": {
+      "comparison_sha256": "030456ad619255cf9af7ad4a007811fa4fecf1ff1090d47bcaf582702bc1f4d1",
+      "source_sha256": "6c49d9a689bc57522288ef6b0502df198001c6f90ad46f1bde837e1ec04222cd"
+    },
+    "figure/terms_hazard_ratio_grid_liver.svg": {
+      "comparison_sha256": "b30338932bc301329df244023c70ef8c62771c86570db5a5025dfbc5067a2c85",
+      "source_sha256": "b557fb2eae585acb29b9b0934a7ec341c9431e9503f37f7abb75cd535ba84aef"
+    },
+    "figure/terms_hazard_ratio_grid_lung.svg": {
+      "comparison_sha256": "88a4a39403ea209dad2c5aef66a1af8d8d413e26ec2d628d29995a0c6ca0d9ed",
+      "source_sha256": "8432dc769afc2b57940fb8a5e42ae694eee82de0507f86ad739f52a0df2f5c0c"
+    },
+    "table/ebm_hyperparameters.tex": {
+      "comparison_sha256": "59f0647dfea03b11ca59f347ac4779568981d526b33e1418db4b8d92657ea21a",
+      "source_sha256": "94a011bf8eb6538183dd8faa6dc661fbe32b784569ab39864318f2002529a4ab",
+      "source_label": "ebm_hyperparameters"
+    },
+    "table/cohort_comparison.tex": {
+      "comparison_sha256": "43c1825ddf7febdb380a9b6839dfe93b86a0c7720c307ee028e03cac05e7038e",
+      "source_sha256": "925bc1148a0f92314349e28d9fbcbb7acba05332295432e5b7ae7af3f57a6f2a",
+      "source_label": "cohort_comparison"
+    },
+    "table/cohort_counts.tex": {
+      "comparison_sha256": "1f4513c9469d2402ad7570a9c9e85dac12428b8734874a90a2a4e65d35733946",
+      "source_sha256": "cde6096ef268ee214a0e15e6ed7b1ba0887b653b39b0ef05326966ad7455f1d0",
+      "source_label": "washout_cohort_counts"
+    },
+    "table/laboratory_reference_limits.tex": {
+      "comparison_sha256": "8983be4eefa6e467e48895b206a9c2e4df54d00953458d202ee8ae0d7a5c4f53",
+      "source_sha256": "c3c365b3b1c10b5c2088c71ebfb0d8001a8dd5b0f090c242acfa5ab46604fdf1",
+      "source_label": "laboratory_reference_limits"
+    },
+    "table/cindex_benchmark_washout.tex": {
+      "comparison_sha256": "5182fdf7c194553634432ffa618f89da0cbc3a566a0e0698b890ee8a6eda569b",
+      "source_sha256": "e6350e88b4e63cbb505021830c209801b0bc79d997a3ee71c82ffe7622259cdf",
+      "source_label": "cindex_benchmark_individual_blood_tests_washout"
+    },
+    "table/complete_case_brier_washout.tex": {
+      "comparison_sha256": "d1fde2b491c22720133bb67e996829f30176359a3e174eb2543d7ab5a5e82cea",
+      "source_sha256": "cc576eb24e98745e5dea7e90bf38111a2e103f07b46bd230775a94a70017ab80",
+      "source_label": "complete_case_brier_washout"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "cindex_benchmark_washout": {
+    "caption": "\\caption{Test C-index at six months by recurrence endpoint and washout interval. C-index estimates and confidence limits are multiplied by 100. Two-sided 95\\% bootstrap percentile confidence intervals are shown. In each column, bold indicates the highest mean C-index and underline the second-highest distinct mean C-index. A blood test model is italicized when its one-sided 95\\% lower bootstrap bound is above 0.5 and its paired C-index difference from the clinical baseline also has a one-sided 95\\% lower bound above zero. The clinical baseline is never italicized.}",
+    "label": "cindex_benchmark_individual_blood_tests_washout"
+  },
+  "complete_case_brier_washout": {
+    "caption": "\\caption{Complete-case Brier score at six months by recurrence endpoint and washout interval. Lower is better; two-sided 95\\% bootstrap percentile intervals condition on fixed fitted models. In each column, bold indicates the lowest mean score and underline the second-lowest distinct mean score. A blood test model is italicized when the one-sided 95\\% upper bootstrap bound of its paired score difference from the clinical baseline is below zero. The clinical baseline is never italicized. Draws match the C-index evaluation, including draws without target events. Early-censored outcomes are omitted; these complete-case scores may be biased by censoring.}",
+    "label": "complete_case_brier_washout"
+  }
+}

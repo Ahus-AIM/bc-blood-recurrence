@@ -1,0 +1,30 @@
+norwegian_test_name,english_test_name
+B-Hb,Hemoglobin
+B-Hemoglobin,Hemoglobin
+B-Leukocytter,Leukocytes
+CRP,C-reactive protein
+P-Kreatinin (med GFR estimert),Creatinine
+S-Kalium,Potassium
+P-Kalium,Potassium
+S-Natrium,Sodium
+P-Natrium,Sodium
+S-CRP,C-reactive protein
+B-Trombocytter,Platelets
+eGFR (CKD-EPI),eGFR
+P-ALAT,ALT
+P-Kalsium,Calcium
+P-GT,GGT
+B-Lymfocytter,Lymphocytes
+B-Monocytter,Monocytes
+B-Nøytrofile granulocytter,Neutrophil granulocytes
+P-ALP,ALP
+B-Basofile granulocytter,Basophil granulocytes
+B-Eosinofile granulocytter,Eosinophil granulocytes
+P-Albumin,Albumin
+S-Glukose,Glucose
+"P-Bilirubin, total",Total bilirubin
+P-ASAT,AST
+P-Kalsium albkorr.,Albumin-corrected calcium
+P-LD,LDH
+P-Magnesium,Magnesium
+"S-Protein, total",Total protein

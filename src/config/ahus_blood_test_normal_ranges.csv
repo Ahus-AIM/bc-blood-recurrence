@@ -1,0 +1,57 @@
+test_name,unit,sex,age_group,lower,upper,lower_operator,upper_operator,source_url,notes
+B-Hemoglobin,g/dl,female,>18 years,11.7,15.3,>=,<=,https://metodebok.no/emne/B57pLY6g/hemoglobin-b/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult reference interval.
+B-Hemoglobin,g/dl,male,>18 years,13.4,17.0,>=,<=,https://metodebok.no/emne/B57pLY6g/hemoglobin-b/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult reference interval.
+B-Leukocytter,x10e9/l,female,adult,3.5,8.8,>=,<=,https://metodebok.no/emne/ytBAWGgY/leukocytter-b/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult reference interval.
+B-Leukocytter,x10e9/l,male,adult,3.5,8.8,>=,<=,https://metodebok.no/emne/ytBAWGgY/leukocytter-b/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult reference interval.
+P-Kreatinin (med GFR estimert),µmol/l,female,adult,45,90,>=,<=,https://metodebok.no/emne/C3K2MXe8/kreatinin-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult reference interval for Kreatinin P.
+P-Kreatinin (med GFR estimert),µmol/l,male,adult,60,105,>=,<=,https://metodebok.no/emne/C3K2MXe8/kreatinin-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult reference interval for Kreatinin P.
+S-Kalium,mmol/l,female,>=18 years,3.6,5.0,>=,<=,https://metodebok.no/emne/zkcpXP3E/kalium-p/laboratoriebok-(ahus),Ahus page lists plasma and serum; serum adult interval used for S-Kalium.
+S-Kalium,mmol/l,male,>=18 years,3.6,5.0,>=,<=,https://metodebok.no/emne/zkcpXP3E/kalium-p/laboratoriebok-(ahus),Ahus page lists plasma and serum; serum adult interval used for S-Kalium.
+S-Natrium,mmol/l,female,all ages,137,145,>=,<=,https://metodebok.no/emne/ZCfhwEJb/natrium-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok Natrium P reference interval; applied to S-Natrium feature.
+S-Natrium,mmol/l,male,all ages,137,145,>=,<=,https://metodebok.no/emne/ZCfhwEJb/natrium-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok Natrium P reference interval; applied to S-Natrium feature.
+S-CRP,mg/l,female,adult,,5.0,,<,https://metodebok.no/emne/AAAGNvG6/crp-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok text reference value for women and men.
+S-CRP,mg/l,male,adult,,5.0,,<,https://metodebok.no/emne/AAAGNvG6/crp-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok text reference value for women and men.
+B-Trombocytter,x10e9/l,female,adult,145,390,>=,<=,https://metodebok.no/emne/G2ifxeZ8/trombocytter-b/laboratoriebok-(ahus),Scraped from Ahus Metodebok women-and-men reference interval.
+B-Trombocytter,x10e9/l,male,adult,145,390,>=,<=,https://metodebok.no/emne/G2ifxeZ8/trombocytter-b/laboratoriebok-(ahus),Scraped from Ahus Metodebok women-and-men reference interval.
+eGFR (CKD-EPI),"ml/min/1,73 m2",female,adult G1,90,,>=,,https://metodebok.no/emne/szcrcA8C/estimert-gfr/laboratoriebok-(ahus),Ahus Metodebok eGFR page gives GFR categories; G1 threshold used as normal-GFR guide.
+eGFR (CKD-EPI),"ml/min/1,73 m2",male,adult G1,90,,>=,,https://metodebok.no/emne/szcrcA8C/estimert-gfr/laboratoriebok-(ahus),Ahus Metodebok eGFR page gives GFR categories; G1 threshold used as normal-GFR guide.
+P-ALAT,u/l,female,>=18 years,10,45,>=,<=,https://metodebok.no/emne/kDdUAjT6/alat-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult reference interval.
+P-ALAT,u/l,male,>=18 years,10,70,>=,<=,https://metodebok.no/emne/kDdUAjT6/alat-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult reference interval.
+P-Kalsium,mmol/l,female,>=18 years,2.21,2.56,>=,<=,https://metodebok.no/emne/2BJXwvsK/kalsium-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult reference interval.
+P-Kalsium,mmol/l,male,>=18 years,2.21,2.56,>=,<=,https://metodebok.no/emne/2BJXwvsK/kalsium-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult reference interval.
+P-Magnesium,mmol/l,female,adult,0.71,0.94,>=,<=,https://metodebok.no/emne/y6cRSp29/magnesium-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok women-and-men reference interval.
+P-Magnesium,mmol/l,male,adult,0.71,0.94,>=,<=,https://metodebok.no/emne/y6cRSp29/magnesium-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok women-and-men reference interval.
+P-GT,u/l,female,<40 years,10,45,>=,<=,https://metodebok.no/emne/KBR3eLmA/gt-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult age- and sex-specific reference interval.
+P-GT,u/l,male,<40 years,10,80,>=,<=,https://metodebok.no/emne/KBR3eLmA/gt-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult age- and sex-specific reference interval.
+P-GT,u/l,female,>=40 years,10,75,>=,<=,https://metodebok.no/emne/KBR3eLmA/gt-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult age- and sex-specific reference interval.
+P-GT,u/l,male,>=40 years,15,115,>=,<=,https://metodebok.no/emne/KBR3eLmA/gt-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult age- and sex-specific reference interval.
+B-Lymfocytter,x10e9/l,female,adult,0.9,2.9,>=,<=,https://metodebok.no/emne/qtFMX6KQ/differensialtelling-av-leukocytter-maskinell-b/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult differential count table.
+B-Lymfocytter,x10e9/l,male,adult,0.9,2.9,>=,<=,https://metodebok.no/emne/qtFMX6KQ/differensialtelling-av-leukocytter-maskinell-b/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult differential count table.
+B-Monocytter,x10e9/l,female,adult,0.2,0.7,>=,<=,https://metodebok.no/emne/qtFMX6KQ/differensialtelling-av-leukocytter-maskinell-b/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult differential count table.
+B-Monocytter,x10e9/l,male,adult,0.2,0.7,>=,<=,https://metodebok.no/emne/qtFMX6KQ/differensialtelling-av-leukocytter-maskinell-b/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult differential count table.
+B-Nøytrofile granulocytter,x10e9/l,female,adult,1.2,6.4,>=,<=,https://metodebok.no/emne/qtFMX6KQ/differensialtelling-av-leukocytter-maskinell-b/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult differential table row labelled Granulocytter.
+B-Nøytrofile granulocytter,x10e9/l,male,adult,1.2,6.4,>=,<=,https://metodebok.no/emne/qtFMX6KQ/differensialtelling-av-leukocytter-maskinell-b/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult differential table row labelled Granulocytter.
+P-ALP,u/l,female,>18 years,35,105,>=,<=,https://metodebok.no/emne/bxfRyFeu/alp-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult reference interval.
+P-ALP,u/l,male,>18 years,35,105,>=,<=,https://metodebok.no/emne/bxfRyFeu/alp-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult reference interval.
+B-Basofile granulocytter,x10e9/l,female,adult,0.0,0.1,>=,<=,https://metodebok.no/emne/qtFMX6KQ/differensialtelling-av-leukocytter-maskinell-b/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult differential count table.
+B-Basofile granulocytter,x10e9/l,male,adult,0.0,0.1,>=,<=,https://metodebok.no/emne/qtFMX6KQ/differensialtelling-av-leukocytter-maskinell-b/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult differential count table.
+B-Eosinofile granulocytter,x10e9/l,female,adult,0.03,0.50,>=,<=,https://metodebok.no/emne/qtFMX6KQ/differensialtelling-av-leukocytter-maskinell-b/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult differential count table.
+B-Eosinofile granulocytter,x10e9/l,male,adult,0.03,0.50,>=,<=,https://metodebok.no/emne/qtFMX6KQ/differensialtelling-av-leukocytter-maskinell-b/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult differential count table.
+P-Albumin,g/l,female,18-39 years,36,48,>=,<=,https://metodebok.no/emne/K88XLHC4/albumin-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult age-specific reference interval.
+P-Albumin,g/l,male,18-39 years,36,48,>=,<=,https://metodebok.no/emne/K88XLHC4/albumin-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult age-specific reference interval.
+P-Albumin,g/l,female,40-69 years,36,45,>=,<=,https://metodebok.no/emne/K88XLHC4/albumin-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult age-specific reference interval.
+P-Albumin,g/l,male,40-69 years,36,45,>=,<=,https://metodebok.no/emne/K88XLHC4/albumin-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult age-specific reference interval.
+P-Albumin,g/l,female,>=70 years,34,45,>=,<=,https://metodebok.no/emne/K88XLHC4/albumin-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult age-specific reference interval.
+P-Albumin,g/l,male,>=70 years,34,45,>=,<=,https://metodebok.no/emne/K88XLHC4/albumin-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult age-specific reference interval.
+S-Glukose,mmol/l,female,adult fasting serum,4.0,6.0,>=,<=,https://metodebok.no/emne/FHwFXw7n/glukose-bps/laboratoriebok-(ahus),Scraped from Ahus Metodebok Glukose B/P/S fasting serum row.
+S-Glukose,mmol/l,male,adult fasting serum,4.0,6.0,>=,<=,https://metodebok.no/emne/FHwFXw7n/glukose-bps/laboratoriebok-(ahus),Scraped from Ahus Metodebok Glukose B/P/S fasting serum row.
+"P-Bilirubin, total",µmol/l,female,>=1 month,,25,,<,https://metodebok.no/emne/M6NKujFS/bilirubin-total-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok reference limit.
+"P-Bilirubin, total",µmol/l,male,>=1 month,,25,,<,https://metodebok.no/emne/M6NKujFS/bilirubin-total-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok reference limit.
+P-ASAT,u/l,female,>=18 years,15,35,>=,<=,https://metodebok.no/emne/EbWvbBiZ/asat-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult reference interval.
+P-ASAT,u/l,male,>=18 years,15,45,>=,<=,https://metodebok.no/emne/EbWvbBiZ/asat-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult reference interval.
+P-Kalsium albkorr.,mmol/l,female,>18 years,2.18,2.45,>=,<=,https://metodebok.no/emne/2s8iNNpi,Ahus-derived interval for albumin-corrected calcium in the National User Handbook in Medical Biochemistry; version 0.2 dated 2021-11-10.
+P-Kalsium albkorr.,mmol/l,male,>18 years,2.18,2.45,>=,<=,https://metodebok.no/emne/2s8iNNpi,Ahus-derived interval for albumin-corrected calcium in the National User Handbook in Medical Biochemistry; version 0.2 dated 2021-11-10.
+P-LD,u/l,female,18-69 years,105,205,>=,<=,https://metodebok.no/emne/MhEF2faw/ld-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult age-specific reference interval.
+P-LD,u/l,male,18-69 years,105,205,>=,<=,https://metodebok.no/emne/MhEF2faw/ld-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult age-specific reference interval.
+P-LD,u/l,female,>=70 years,115,255,>=,<=,https://metodebok.no/emne/MhEF2faw/ld-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult age-specific reference interval.
+P-LD,u/l,male,>=70 years,115,255,>=,<=,https://metodebok.no/emne/MhEF2faw/ld-p/laboratoriebok-(ahus),Scraped from Ahus Metodebok adult age-specific reference interval.

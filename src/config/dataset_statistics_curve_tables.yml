@@ -1,0 +1,59 @@
+cohort_reference: Manuscript (15), Figure 1; 5,340 study-cohort patients
+source_note: Pending matching numerical incidence and at-risk counts.
+visible_sites:
+- Any
+- Bone
+- Brain
+- Liver
+- Lung
+- Other
+incidence:
+  years:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  percent:
+    Any: null
+    Bone: null
+    Brain: null
+    Liver: null
+    Lung: null
+    Other: null
+survival:
+  years:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  at_risk:
+    Any: null
+    Bone: null
+    Brain: null
+    Liver: null
+    Lung: null
+    Other: null

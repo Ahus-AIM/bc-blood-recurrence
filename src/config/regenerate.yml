@@ -1,0 +1,24 @@
+source: {}
+regenerate:
+  tasks:
+  - cohort_statistics
+  - recurrence_statistics
+  - washout_counts
+  - washout_table
+  - brier_table
+  - explanations
+  - top_features
+  sites:
+  - All
+  - Bone
+  - Brain
+  - Liver
+  - Lung
+  horizons:
+  - 6m
+  models:
+  - all_blood_tests
+  allow_competing_model_fit: false
+paper_bundle:
+  enabled: true
+  horizon: 6m

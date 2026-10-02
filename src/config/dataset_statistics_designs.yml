@@ -1,0 +1,63 @@
+cohort_box_layouts:
+  figure_width_mm: 200
+  figure_height_mm: 266
+  alternative_figure_height_mm: 255
+  flow_column_gap_mm: 5
+  retained_arrow_head_length_mm: 0.25
+  retained_arrow_head_width_mm: 0.4
+  calendar_height_mm: 78
+  calendar_legend_row_height_mm: 5
+  split_year_ranges:
+  - "2004\u20132016"
+  - "2017\u20132021"
+  - "2022\u20132026"
+  - "2004\u20132026"
+  curve_tables:
+    config_path: dataset_statistics_curve_tables.yml
+    first_row_offset_mm: 7
+    panel_widths_mm:
+    - 105
+    - 94
+    left_margins_mm:
+    - 17
+    - 17
+    right_margin_mm: 4
+    label_gap_mm: 2
+  option_one:
+    table_title_y_mm: 128
+    table_header_y_mm: 133
+    table_row_height_mm: 2.8
+    table_note_y_mm: 178.6
+    assay_top_mm: 88
+    curves_top_mm: 190
+    curves_bottom_mm: 241
+    curve_year_step: 1
+    incidence_percent_step: 1
+    survival_percent_step: 10
+  retained_labels:
+  - "Females diagnosed with BC at Ahus\n1 Dec 1998\u20138 Jun 2026"
+  - "Initial BC diagnosis \u2265 2004"
+  - No other cancer before BC diagnosis
+  - No distant recurrence before BC diagnosis
+  - "No other cancer on days 0\u201330\nafter BC diagnosis"
+  - "No distant recurrence on days 0\u201330\nafter BC diagnosis"
+  - Days with >12 different blood tests
+  - Blood tests >30 days after BC diagnosis
+  - 'Blood tests before recurrence, other
+
+    cancer, death or right-censoring'
+  excluded_labels:
+  - 1  Initial BC diagnosis before 2004
+  - 2  Other cancer before BC diagnosis
+  - 3  Distant recurrence before BC diagnosis
+  - "4  Other cancer on days 0\u201330\nafter BC diagnosis"
+  - "5  Distant recurrence on days 0\u201330\nafter BC diagnosis"
+  - 6  No days with >12 different blood tests
+  - '7  No blood tests >30 days
+
+    after BC diagnosis'
+  - '8  No blood tests before recurrence,
+
+    other cancer, death or right-censoring'
+table_refinements:
+  subcategory_indent_mm: 2.0

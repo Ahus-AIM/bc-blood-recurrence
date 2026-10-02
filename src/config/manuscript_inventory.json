@@ -1,0 +1,28 @@
+{
+  "figures": [
+    "dataset_statistics",
+    "ebm_top_features",
+    "global_importance",
+    "global_importance_bone",
+    "global_importance_brain",
+    "global_importance_liver",
+    "global_importance_lung",
+    "recurrence_blood_test_trajectories",
+    "recurrence_blood_test_trajectories_any",
+    "recurrence_blood_test_trajectories_bone",
+    "recurrence_blood_test_trajectories_brain",
+    "recurrence_blood_test_trajectories_liver",
+    "recurrence_blood_test_trajectories_lung",
+    "terms_hazard_ratio_grid",
+    "terms_hazard_ratio_grid_bone",
+    "terms_hazard_ratio_grid_brain",
+    "terms_hazard_ratio_grid_liver",
+    "terms_hazard_ratio_grid_lung"
+  ],
+  "tables": [
+    "cindex_benchmark_washout",
+    "complete_case_brier_washout",
+    "cohort_comparison",
+    "cohort_counts"
+  ]
+}

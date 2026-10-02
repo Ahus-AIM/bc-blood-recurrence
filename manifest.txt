@@ -1,0 +1,101 @@
+Study reproduction manifest
+===========================
+
+Purpose
+-------
+Extract the original study inputs, fit the Cox EBM breast-cancer recurrence
+benchmark, and generate every current manuscript/supplement figure and table.
+The acceptance reference is the manuscript working tree on 2026-10-02, captured
+as hashes in src/config/manuscript_reference.json. Clinical equality is pending
+validation on the machine holding the original inputs, models and environment.
+
+Scope and migration
+-------------------
+Keep the original numerical modules and scientific configuration. Convert the
+four extraction notebooks to sequential Python stages, preserving row order,
+normalization, recurrence selection and CSV serialization/reload boundaries.
+Use fixed data/raw, data/processed and output locations; no CLI path arguments or
+path settings in user YAML. Analysis settings remain in src/config. Saved-run
+input paths are relocated without replacing explicit nulls or model settings.
+Exclude manuscript source, dashboards, exploratory previews, clinical records,
+clinical fitted models and generated clinical outputs from the public repository.
+Retain relevant regression tests and original source hashes. LICENSE is the
+unchanged CC-BY-SA-4.0 text from Ahus-AIM/Open-ECG-Digitizer.
+
+Active study assumptions
+------------------------
+The eligible cohort starts with diagnosis year >=2004 and a required diagnosis
+age. Model ages are externally supplied five-year lower-bound values. Separate
+exact-age quartiles are supplied for figures/tables through a cohort-hash-matched
+external return; the original clinical age-calculation code is not yet available.
+Training diagnoses are <=2016, validation 2017-2021, test >=2022.
+
+Any (saved key All), Bone, Brain, Liver and Lung are evaluated at 180 days.
+The Any input recurrence definition is C78/C79, and site definitions are C795,
+C793, C787 and C780 with the original code-matching behavior. Death and competing
+outcomes censor recurrence fitting; first input recurrence and original outcome
+precedence govern site-specific follow-up. Other cancers exclude/censor as in
+the original pipeline. Do not simplify this ordering during migration.
+
+Candidate landmarks are after day 30 with at least 13 of the selected 24 tests.
+Observation-end-day blood tests are included. Diagnosis age and time since
+diagnosis accompany every predictor set. Change features, recent-diagnosis
+features, C50-window restriction and prior-BC-surgery exclusion are disabled.
+Report history retains appropriate pre-landmark measurements separately from
+model-input filtering, exactly as in the original data modules.
+
+Use 30-day LOCF with training-fitted MICE fallback, equal total fitting weight
+per patient, and patient-then-one-landmark bootstrap sampling. There are 14
+patient-grouped EBM outer bags, validation fraction 0.15, max_bins 16, learning
+rate 0.04, max_rounds 50000, early-stopping rounds 100, min_samples_leaf 4,
+random seed 42 and n_jobs 4. Test bootstrap has 1000 attempted replicates; its
+patient-based sample size is the eligible patient count in each washout pool.
+
+The benchmark has 24 single-test models, a clinical baseline and an all-tests
+model for each endpoint. Washouts are 0, 30, 60 and 90 days. The Brier workflow
+retains matching competing-event Cox EBMs, patient-weighted training Breslow
+baselines, product-integral probabilities, complete-case evaluation and paired
+bootstrap draws. Native tied-event row-order dependence and unequal-weight
+gradient/loss inconsistency are retained and covered by expected-failure tests.
+
+Descriptive trajectories use the original within-patient window summaries,
+paired signed-rank tests, global multiple-comparison adjustment and exact-date
+reference scoring. The standalone reference calculator source and hash semantics
+are unchanged. Post-recurrence survival ends at recorded death, otherwise last
+diagnosis/blood/procedure, retaining the current source manifest's later update.
+
+Outputs and verification
+------------------------
+Extraction: bc_endpoints.csv, blood_test.csv, diagnosis_procedure.csv,
+bc_split.csv and bc_diagnosis_days.csv. Model ages are a separate required input.
+Benchmark: saved configs, models, model inputs, risk scores, bootstrap results,
+cohort/statistical summaries and aggregate tables under output/benchmark.
+Publication: 18 SVG figures and six tables under output/paper, with original
+styling plus the current manuscript's performance-table presentation. Table
+values and significance marks come from generated results, never pasted values.
+Hyperparameters come from the saved effective config; the female reference-limit
+table is static study metadata. PNGs retain the original exporter appearance.
+
+The synthetic generator refuses to overwrite existing inputs or outputs. The
+demo uses byte-verified invented data, a reduced fitting/bootstrap budget and
+explicit synthetic markers. Its age-summary routine is not a clinical substitute.
+
+Verification compares current manuscript hashes and optional original CSVs in
+reference/. It reports missing references and differences. Package/native-binary
+environment capture is separate. The clinical InterpretML build is development
+commit ec1c18d962c3deab1ab8af374e8eb69e0d708969; PyPI version 0.7.8 alone is not
+proof of equivalence. The source manifest also records newer calculations than
+some saved outputs. Do not assert clinical equality until those are reconciled.
+
+Validation and outstanding work
+-------------------------------
+All five converted extraction exports match the original notebook-cell exports
+byte for byte on identical synthetic inputs. The synthetic end-to-end run
+completed all 130 recurrence models/390 split results and all publication files.
+Regression tests and Ruff are run locally; expected failures and optional clinical
+reference checks are documented in docs/reproducibility.md. Pending external work:
+original clinical age routine, original clinical environment, and validation
+against the saved manuscript run. No clinical data or repository history is copied.
+On 2026-10-02 the full suite reported 1131 passed, 3 skipped and 7 expected
+failures; eight focused comparison/presentation cases passed after the final
+table-divider adjustment. Ruff passed. All six synthetic LaTeX tables compiled.

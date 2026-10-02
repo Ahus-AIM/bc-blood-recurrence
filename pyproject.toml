@@ -1,0 +1,35 @@
+[project]
+name = "bc-blood-recurrence"
+version = "0.1.0"
+license = "CC-BY-SA-4.0"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "interpret>=0.7.8",
+    "joblib",
+    "lifelines",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "pyyaml",
+    "scikit-learn",
+    "scipy>=1.15",
+    "torch",
+    "tqdm",
+]
+
+[dependency-groups]
+dev = [
+    "black",
+    "pytest",
+    "ruff",
+]
+
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+extend-select = ["ARG"]

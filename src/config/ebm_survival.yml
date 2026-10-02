@@ -1,0 +1,138 @@
+dataset:
+  split: train
+  train_end_year: 2016
+  test_start_year: 2022
+  restrict_bloodtests_to_bc_diagnosis_window: false
+  bc_diagnosis_window_days_before: 1
+  bc_diagnosis_window_days_after: 0
+  exclude_and_censor_other_cancer_patients: true
+  other_cancer_code_filter_regex: C(?!(?:50|7[7-9]|9[89]))[0-9]{2}\d*
+  exclude_prior_bc_surgery_patients: false
+  prior_bc_surgery_code_regex: ^38(?!8[01])\d{2}$
+  recurrence_endpoint_name: distant_recurrence
+  input_recurrence_code_filter_regex: (?:C78\d*)|(?:C79\d*)
+  endpoint_ddfs_code_filter_regex: (?:C787\d*)
+  num_most_common_blood_tests: 24
+  censor_on_non_endpoint_recurrence: true
+  censoring_horizon_days: 30
+  min_landmark_day: 31
+  include_recurrence_day_blood_tests: true
+  min_blood_test_types_per_day: 1
+  min_diagnosis_year: 2004
+  training_sample_weighting: landmark_uniform
+  bootstrap_sample_weighting: landmark_uniform
+  selected_blood_tests: []
+  random_seed: 42
+  train_bootstrap_runs: 100
+  train_bootstrap_samples: 2000
+  validation_bootstrap_runs: 100
+  validation_bootstrap_samples: 1000
+  test_bootstrap_runs: 100
+  test_bootstrap_samples: 1000
+  include_diagnosis_age: true
+  require_diagnosis_age: true
+  include_time_since_diagnosis: true
+  include_blood_test_change: false
+  blood_test_change_min_days: 7
+  blood_test_change_max_days: 365
+  include_recent_diagnoses: false
+  num_most_common_recent_diagnoses: 100
+  recent_diagnosis_lookback_days: 90
+  include_landmark_day_recent_diagnoses: false
+  build_patient_timeline_tensors: false
+ebm:
+  interactions: 0
+  validation_size: 0.15
+  outer_bags: 14
+  patient_grouped_outer_bags: true
+  patient_grouped_bag_max_attempts: 10000
+  learning_rate: 0.04
+  max_rounds: 50000
+  early_stopping_rounds: 100
+  min_samples_leaf: 4
+  random_state: 42
+  n_jobs: 1
+imputation:
+  enabled: true
+  method: locf
+  locf_max_age_days: 30
+  locf_fallback_method: mice
+  max_iter: 1000
+  tol: 0.001
+  random_state: 42
+output:
+  write_explanations: true
+  explanation_include_missing_bins: true
+  explanation_term_x_axis_scale: log
+  write_combined_term_hazard_ratio_plot: true
+  combined_term_hazard_ratio_columns: 4
+  combined_term_hazard_ratio_y_min: 0.2
+  combined_term_hazard_ratio_y_max: 5.0
+  combined_term_hazard_ratio_show_x_markers: false
+  combined_term_hazard_ratio_show_uncertainty_area: true
+  evaluate_test: true
+  write_model_input_csv: true
+population_statistics:
+  table_caption: Population statistics. Only recurrence sites registered on the first recurrence day are counted.
+  table_label: tab:population_statistics
+  other_label: Other
+  site_labels:
+  - Bone
+  - Brain
+  - Liver
+  - Lung
+  site_regexes:
+  - C795\d*
+  - C793\d*
+  - C787\d*
+  - C780\d*
+landmark_event_counts:
+  table_caption: Patients with at least one event landmark by recurrence site and censoring horizon. Dataset-fold
+    labels show first-recurrence patient counts; cells show event patients and percentages of those fold counts.
+    Site-specific subgroups are not mutually exclusive; patients with multiple synchronous distant recurrence sites
+    are counted in each applicable subgroup.
+  table_label: tab:landmark_event_counts
+  include_all_site: true
+  all_site_label: All
+  other_label: Other
+  horizons:
+  - label: 1m
+    days: 30
+  - label: 3m
+    days: 90
+  - label: 6m
+    days: 180
+  - label: 1y
+    days: 365
+  - label: 2y
+    days: 730
+  site_labels:
+  - Bone
+  - Brain
+  - Liver
+  - Lung
+  site_regexes:
+  - C795\d*
+  - C793\d*
+  - C787\d*
+  - C780\d*
+temporal_risk:
+  figure_width: 7.0
+  panel_height: 1.75
+  dpi: 300
+  font_size: 8.0
+  title_font_size: 9.0
+  month_days: 30
+  include_overall: true
+  overall_label: Any
+  other_label: Other
+  site_labels:
+  - Lung
+  - Liver
+  - Bone
+  - Brain
+  site_regexes:
+  - C780\d*
+  - C787\d*
+  - C795\d*
+  - C793\d*

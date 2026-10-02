@@ -1,0 +1,22 @@
+# AGENTS.md
+- Preserve numerical behavior and original source provenance; manuscript agreement is the acceptance criterion.
+- Keep input/output paths fixed and repository-relative; YAML holds analysis/presentation settings only.
+- Do not add clinical inputs, patient-level outputs, fitted clinical models or original repository history.
+- Do not replace the pending clinical age calculation with an approximation.
+- Read manifest.txt and ensure that all changes made to the code reflects the intent of manifest.txt and that the manifest is up to date with the codebase.
+- It is very important that the code emphasises readability for the programmer.
+- Functions/methods should be short, for readability, in most cases <100 lines.
+- Python files should be short, for readability, in most cases <500 lines.
+- Be as little verbose as possible.
+- The tests should pass. You can run them with ```uv run pytest```
+- Run ruff linting before finishing your changes.
+- Python files should not have arguments passed to them, but should rely on config files stored in src/config.
+- Reusability of code is very important, do not duplicate code but try to make robust modules.
+- Do typing of arguments and return types as precisely as possible.
+- When running python, use uv: ```uv run python```
+- Imports should be at the top of the file, do not "try - except" imports in the middle of a file.
+- Don't do nested getting of values from collections like this: "d.get("key", default_val) or default_val". Just do "d.get("key", default_val)". This also applies to eg. getattr.
+- When indexing a datatype where the key is present and the value is "None", never make "None" to "default value" if None is a perfectly valid value.
+- Create brief docstrings where you deem necessary; the ones that are the hardest to understand from method name.
+- A dataclass should always have a docstring, explaining the different parameters in use and how the class works.
+- Ensure that docstrings are up to date.

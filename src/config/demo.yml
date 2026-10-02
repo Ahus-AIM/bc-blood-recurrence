@@ -1,0 +1,17 @@
+dataset:
+  train_bootstrap_runs: 5
+  train_bootstrap_samples: 72
+  validation_bootstrap_runs: 5
+  validation_bootstrap_samples: 36
+  test_bootstrap_runs: 5
+ebm:
+  outer_bags: 2
+  max_rounds: 5
+  early_stopping_rounds: 2
+  n_jobs: 1
+imputation:
+  max_iter: 20
+benchmark:
+  resume: false
+output:
+  write_explanations: false

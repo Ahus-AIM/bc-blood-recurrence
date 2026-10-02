@@ -1,0 +1,26 @@
+\begin{table*}[p]
+\centering
+\ifdefined\performanceModelWidth\else\newlength{\performanceModelWidth}\fi
+\ifdefined\performanceValueWidth\else\newlength{\performanceValueWidth}\fi
+\settowidth{\performanceModelWidth}{Diagnosis age \& time since diagnosis (baseline)}
+\settowidth{\performanceValueWidth}{\textbf{\textit{0.000 [0.000, 0.000]}}}
+\newcolumntype{P}{W{c}{\performanceValueWidth}}
+%% CAPTION
+%% LABEL
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{W{l}{\performanceModelWidth}PPPP|PPPP|PPPP|PPPP|PPPP}
+\hline
+& \multicolumn{4}{c|}{Any}
+& \multicolumn{4}{c|}{Bone}
+& \multicolumn{4}{c|}{Brain}
+& \multicolumn{4}{c|}{Liver}
+& \multicolumn{4}{c|}{Lung} \\
+\cline{2-21}
+& \multicolumn{4}{c|}{Washout interval} & \multicolumn{4}{c|}{Washout interval} & \multicolumn{4}{c|}{Washout interval} & \multicolumn{4}{c|}{Washout interval} & \multicolumn{4}{c}{Washout interval} \\
+Model & None & 1 month & 2 months & 3 months & None & 1 month & 2 months & 3 months & None & 1 month & 2 months & 3 months & None & 1 month & 2 months & 3 months & None & 1 month & 2 months & 3 months\\
+\hline
+%% RESULT_ROWS
+\hline
+\end{tabular}%
+}
+\end{table*}

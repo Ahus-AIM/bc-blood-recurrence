@@ -1,0 +1,1365 @@
+{
+  "source_commit": "8c718aea05b6796be4e2cc5d7e3683bcc5227fb3",
+  "reference": "Manuscript and supplementary figures/tables as supplied on 2026-10-02",
+  "clinical_interpret_commit": "ec1c18d962c3deab1ab8af374e8eb69e0d708969",
+  "clinical_equivalence": "pending validation against the saved clinical run and current manuscript",
+  "migration_changes": [
+    "Extract four notebooks into scripts, preserving transformations and serialization boundaries.",
+    "Remove configurable paths from YAML; inject fixed repository paths, relocating saved inputs and preserving nulls.",
+    "Expose the original training main body as train_from_config for the reduced synthetic demo.",
+    "Retain reference calculator bytes/hash semantics and restore its fixed default filenames at the export boundary.",
+    "Extract three trajectory-legend helpers without the exploratory preview renderer dependency.",
+    "Remove dashboard dependency from single-run training reference regeneration; retain historical weighting aliases.",
+    "Restrict layout resources to production figure settings, omitting preview counts and historical manual ages.",
+    "Add manuscript finishing steps for performance-table presentation and export two supplementary tables.",
+    "Adapt tests from omitted notebooks/manuscript assets to public entry points, inventory or optional local references.",
+    "Retain three reproduced pre-existing layout failures as strict xfails; update stale text expectations to current labels."
+  ],
+  "preserved_scientific_configuration": [
+    "ebm_survival.yml",
+    "ebm_single_bloodtest_benchmark.yml"
+  ],
+  "copied_files": {
+    "src/__init__.py": {
+      "source_sha256": "c55d6a4ec6939eb01da8781ba00aec8b769d861b5ae0887a685354b85e00704b",
+      "public_sha256": "c55d6a4ec6939eb01da8781ba00aec8b769d861b5ae0887a685354b85e00704b",
+      "disposition": "unchanged"
+    },
+    "src/config/__init__.py": {
+      "source_sha256": "0b40ffece6071c4441f7a7e4937b65623c05b4fd89d2518cdbcdec1e5b37febf",
+      "public_sha256": "07b5ff7ea7cedd11aabde13f9fc28ca65edaff1c650bd07a0f3ac6073164e566",
+      "disposition": "adapted"
+    },
+    "src/config/ahus_blood_test_normal_ranges.csv": {
+      "source_sha256": "9eae89acee0be1ed858c5c6b13e3f311c7586d6ace614e983e7b60e49cbd09bb",
+      "public_sha256": "9eae89acee0be1ed858c5c6b13e3f311c7586d6ace614e983e7b60e49cbd09bb",
+      "disposition": "unchanged"
+    },
+    "src/config/blood_test_name_translations.csv": {
+      "source_sha256": "6481c110320f993ff159d7f620f6ffe051f120d1ce335c1aeec8394b990c3c73",
+      "public_sha256": "6481c110320f993ff159d7f620f6ffe051f120d1ce335c1aeec8394b990c3c73",
+      "disposition": "unchanged"
+    },
+    "src/config/dataset_statistics.yml": {
+      "source_sha256": "01bba068f5005a08ba3f669aab3d8a53b74397175817137a968f9e3daa75412b",
+      "public_sha256": "416eab19656a875ad253c831b531cf3d340037a4c85e1ddc110c85d4a6425481",
+      "disposition": "adapted"
+    },
+    "src/config/dataset_statistics_curve_tables.yml": {
+      "source_sha256": "164ba99d57ea60481c4467bc678cbe49c8815acd26ef93255e9b08148e132026",
+      "public_sha256": "08fdba3a97536fc1054f3da89b4f75b697704905b9c5a7ddd99834d725bc64b5",
+      "disposition": "adapted"
+    },
+    "src/config/dataset_statistics_designs.yml": {
+      "source_sha256": "bf6c3e61a1b5022b43bf3bbbad4146fe76c62df94ec1191f9026db0d5bca05c0",
+      "public_sha256": "6b694847b8c14ed272b26cbc15ce9300f84e5bcec29918f5acd0fd7910bc9610",
+      "disposition": "adapted"
+    },
+    "src/config/dataset_statistics_layouts.yml": {
+      "source_sha256": "38d71bdc25e9a4d3a28de05482831fd032c2a7f3f3555577d768f8ca47125122",
+      "public_sha256": "726f7c3ce27a1734fd0dfbeac0c73e89222973c70c6c9a4e3446b0c31429671c",
+      "disposition": "adapted"
+    },
+    "src/config/ebm_single_bloodtest_benchmark.yml": {
+      "source_sha256": "09f39a139594d296d91c0c801f088b741d34ff01e2f0703482ffe8021ed5edb5",
+      "public_sha256": "290d4fef3b86c85730032231e48d0393200c1b0c2bc27ce27773c213d7795fb6",
+      "disposition": "adapted"
+    },
+    "src/config/ebm_survival.yml": {
+      "source_sha256": "cb0edff24ed19ed46eae959f47c17ff1e0688ea0a82505163b2ec9aedfc7259f",
+      "public_sha256": "63687964ecfac8da075f0189eecbb7f6285456ab1fb272777969158fb230bb60",
+      "disposition": "adapted"
+    },
+    "src/config/figure_headings.yml": {
+      "source_sha256": "be365c12f6894412dc37e4ee4311bbec5b76fbbb506708dcb0fc418376de4500",
+      "public_sha256": "06df894432b828443bf18032798bf170e1ff640523641b9d722547606a80ad17",
+      "disposition": "adapted"
+    },
+    "src/config/publication_style.yml": {
+      "source_sha256": "3b65de26dd5e6ae3c7f8094c5c84517a566fac278f50a3250708dc2b36ac5783",
+      "public_sha256": "2a6dbd59053ea885039b67031f09a7271d603d11069079d677e7e22553a4dd37",
+      "disposition": "adapted"
+    },
+    "src/config/recurrence_blood_test_insights.yml": {
+      "source_sha256": "5c50a0665372ca031509d14b2c5c01d093f06f6c427e2978533d5958e4ce1790",
+      "public_sha256": "5502d2ab73c48387aa8600e57905d3aa80ddd1a54271ee8c4b71db7176f71cfa",
+      "disposition": "adapted"
+    },
+    "src/config/recurrence_reference_remote.json": {
+      "source_sha256": "9a947ec9c2aaad666db99e542317feece5aa33ca240e40b81245bb1d2685c7e7",
+      "public_sha256": "22fdc1df204ae0065a41a7c1094df6e78e49a5689d74f5ce3039875e637c2eb5",
+      "disposition": "adapted"
+    },
+    "src/config/regenerate.yml": {
+      "source_sha256": "287b6cff279e55a4126ca5aca5a9f2367d5f199c17d5ae60629c36dc8f3ec2c1",
+      "public_sha256": "baa17b1a5243cd1310b7ce5da380abad15fe78ee464600668686a1b76c69e26d",
+      "disposition": "adapted"
+    },
+    "src/config/report_returns.yml": {
+      "source_sha256": "90c3a9073456d6af77d817488ac00cc476e54aaa30300dd93a1c8c5b9132f595",
+      "public_sha256": "70e8f10132a86ec79bca951b6d1a82bdbde27c784adf486c27f9df3b34b6463b",
+      "disposition": "adapted"
+    },
+    "src/config/validate_survival_model.yml": {
+      "source_sha256": "6e55eb597c981c5da4143dae731aa89e59caf9b4d71859125dd32a61e000bf1b",
+      "public_sha256": "dc4acccf0b570df852ab9de53568502c318c4fc9772d8e6d210a65c22b3d0f09",
+      "disposition": "adapted"
+    },
+    "src/data/__init__.py": {
+      "source_sha256": "e71575dc295f13240d69655c8b0f18cde9028225b2b2b01e6075f4a8d3030823",
+      "public_sha256": "e71575dc295f13240d69655c8b0f18cde9028225b2b2b01e6075f4a8d3030823",
+      "disposition": "unchanged"
+    },
+    "src/data/bc_diagnosis_window.py": {
+      "source_sha256": "8c5ca24ad8638392c4396347f753d694403c995466e54121aa8f7f89ef4348ca",
+      "public_sha256": "8c5ca24ad8638392c4396347f753d694403c995466e54121aa8f7f89ef4348ca",
+      "disposition": "unchanged"
+    },
+    "src/data/benchmark_landmarks.py": {
+      "source_sha256": "c7473915a2684f930d6cd18b6fa98117f9ced7b3173d821a7f7251b8ed8c0131",
+      "public_sha256": "c7473915a2684f930d6cd18b6fa98117f9ced7b3173d821a7f7251b8ed8c0131",
+      "disposition": "unchanged"
+    },
+    "src/data/blood_test_change.py": {
+      "source_sha256": "404064d87ec19b4763a8d9c079c94dd5f28a41278c681b0729234574e8777eb1",
+      "public_sha256": "404064d87ec19b4763a8d9c079c94dd5f28a41278c681b0729234574e8777eb1",
+      "disposition": "unchanged"
+    },
+    "src/data/blood_test_display.py": {
+      "source_sha256": "ba89d0491f37af3f11008641fe7e94a3c77fc7ed44ea54b3cc64e4a38c47633c",
+      "public_sha256": "ba89d0491f37af3f11008641fe7e94a3c77fc7ed44ea54b3cc64e4a38c47633c",
+      "disposition": "unchanged"
+    },
+    "src/data/blood_test_features.py": {
+      "source_sha256": "3ef238542cd8449f8af7dedafc4919f2164634415b439e202e6527e78fbde515",
+      "public_sha256": "3ef238542cd8449f8af7dedafc4919f2164634415b439e202e6527e78fbde515",
+      "disposition": "unchanged"
+    },
+    "src/data/cohort_age_exchange.py": {
+      "source_sha256": "d993abeda281c0ec7f6fbc0686983be27fbe4bf64b8d9c18a31e8ce59d4d9a07",
+      "public_sha256": "d993abeda281c0ec7f6fbc0686983be27fbe4bf64b8d9c18a31e8ce59d4d9a07",
+      "disposition": "unchanged"
+    },
+    "src/data/cohort_comparison.py": {
+      "source_sha256": "c7a0a8fcbf2c95c4c67fa0fcb135cb8d1b7f5998f952c3916aa28f6e5a019575",
+      "public_sha256": "c7a0a8fcbf2c95c4c67fa0fcb135cb8d1b7f5998f952c3916aa28f6e5a019575",
+      "disposition": "unchanged"
+    },
+    "src/data/cohort_comparison_data.py": {
+      "source_sha256": "cb527ea1966793712bb7325aa884430675d186be4a95da227cd852c4b5745e3a",
+      "public_sha256": "cb527ea1966793712bb7325aa884430675d186be4a95da227cd852c4b5745e3a",
+      "disposition": "unchanged"
+    },
+    "src/data/cohort_figure.py": {
+      "source_sha256": "59c98f4d7e9d2ca668ee3fb08ff9ed5a58809a952922e706eef44ed9b732f9aa",
+      "public_sha256": "59c98f4d7e9d2ca668ee3fb08ff9ed5a58809a952922e706eef44ed9b732f9aa",
+      "disposition": "unchanged"
+    },
+    "src/data/cohort_selection.py": {
+      "source_sha256": "99300ba8fbc063ff40f0db339b59c4b44e43193234cdf56470347cc652a280e2",
+      "public_sha256": "99300ba8fbc063ff40f0db339b59c4b44e43193234cdf56470347cc652a280e2",
+      "disposition": "unchanged"
+    },
+    "src/data/competing_risk_outcomes.py": {
+      "source_sha256": "367f204862cc0366138e88e9996506e9fd8df8047706179d9784f0a3325af0aa",
+      "public_sha256": "367f204862cc0366138e88e9996506e9fd8df8047706179d9784f0a3325af0aa",
+      "disposition": "unchanged"
+    },
+    "src/data/dataset.py": {
+      "source_sha256": "c9af348f112a65b713ed5967511b25ad6c64932cb0b064033c466f2df4c13e49",
+      "public_sha256": "c9af348f112a65b713ed5967511b25ad6c64932cb0b064033c466f2df4c13e49",
+      "disposition": "unchanged"
+    },
+    "src/data/dataset_config.py": {
+      "source_sha256": "836ec906f879c02f857257ec07c2523cedba34389279b19c7274e1e3f3682039",
+      "public_sha256": "836ec906f879c02f857257ec07c2523cedba34389279b19c7274e1e3f3682039",
+      "disposition": "unchanged"
+    },
+    "src/data/dataset_logging.py": {
+      "source_sha256": "7715060d03e51f70f89ee3f9b11b7c89721c4a3b97665989e75807dbc2627fc8",
+      "public_sha256": "7715060d03e51f70f89ee3f9b11b7c89721c4a3b97665989e75807dbc2627fc8",
+      "disposition": "unchanged"
+    },
+    "src/data/dataset_statistics.py": {
+      "source_sha256": "9ce01db5f1f5478bd71e1b6484d916e858a6b93ba21563648f05cbe9097091ad",
+      "public_sha256": "9ce01db5f1f5478bd71e1b6484d916e858a6b93ba21563648f05cbe9097091ad",
+      "disposition": "unchanged"
+    },
+    "src/data/dataset_statistics_export.py": {
+      "source_sha256": "065f8227677be213040c0fff90eb432a7482a744082007dbea281bcff10dcefa",
+      "public_sha256": "065f8227677be213040c0fff90eb432a7482a744082007dbea281bcff10dcefa",
+      "disposition": "unchanged"
+    },
+    "src/data/endpoint_extraction.py": {
+      "source_sha256": "e274bd2860351d80ff05147389b9f89a53489301198e1d4c4d0c327d898da9ee",
+      "public_sha256": "e274bd2860351d80ff05147389b9f89a53489301198e1d4c4d0c327d898da9ee",
+      "disposition": "unchanged"
+    },
+    "src/data/endpoint_logging.py": {
+      "source_sha256": "b4e6cd5644896a44137aa0fc9ac23a1c3ad34caa3d59a261e71275ff371f1812",
+      "public_sha256": "b4e6cd5644896a44137aa0fc9ac23a1c3ad34caa3d59a261e71275ff371f1812",
+      "disposition": "unchanged"
+    },
+    "src/data/exact_signed_rank.py": {
+      "source_sha256": "4ed52547c9809ee29ad74553f003d13ee3725a307836bf8798d3cc11baae6ba4",
+      "public_sha256": "4ed52547c9809ee29ad74553f003d13ee3725a307836bf8798d3cc11baae6ba4",
+      "disposition": "unchanged"
+    },
+    "src/data/icd_codes.py": {
+      "source_sha256": "5ae955f64eaf316db965715d37d9ebe985533ee22c88b52fb0a187f010fbb4b4",
+      "public_sha256": "5ae955f64eaf316db965715d37d9ebe985533ee22c88b52fb0a187f010fbb4b4",
+      "disposition": "unchanged"
+    },
+    "src/data/landmark_event_counts.py": {
+      "source_sha256": "8e359929ed0a559c85f6c96ec115b8c4febafe968ee0c764ae03a5d63526431a",
+      "public_sha256": "8e359929ed0a559c85f6c96ec115b8c4febafe968ee0c764ae03a5d63526431a",
+      "disposition": "unchanged"
+    },
+    "src/data/landmarks.py": {
+      "source_sha256": "5df2d8dcae49ae5597e48e839be61f37f228b4be98a1526a64a1e284fe4e634d",
+      "public_sha256": "5df2d8dcae49ae5597e48e839be61f37f228b4be98a1526a64a1e284fe4e634d",
+      "disposition": "unchanged"
+    },
+    "src/data/measurement_selection.py": {
+      "source_sha256": "af4cbb393d5825a2ce92e19d87910c0d2b523007ce974157599ca482e3b946b4",
+      "public_sha256": "af4cbb393d5825a2ce92e19d87910c0d2b523007ce974157599ca482e3b946b4",
+      "disposition": "unchanged"
+    },
+    "src/data/observation_window.py": {
+      "source_sha256": "3cc63603d1288335862b343bf3ff032cfce3b85e5b1d146e1d34478cd32b4be7",
+      "public_sha256": "3cc63603d1288335862b343bf3ff032cfce3b85e5b1d146e1d34478cd32b4be7",
+      "disposition": "unchanged"
+    },
+    "src/data/other_cancer_outcomes.py": {
+      "source_sha256": "7b8370ea31b4a5eb912d9b2740a0027397a5b5bc0a3195e8eacc75e9c35195ab",
+      "public_sha256": "7b8370ea31b4a5eb912d9b2740a0027397a5b5bc0a3195e8eacc75e9c35195ab",
+      "disposition": "unchanged"
+    },
+    "src/data/patient_cohort_stages.py": {
+      "source_sha256": "023ec40d975dea50e940a559d8a7cc8f67e2c8ecd19e1a9726296edf67d3fabd",
+      "public_sha256": "023ec40d975dea50e940a559d8a7cc8f67e2c8ecd19e1a9726296edf67d3fabd",
+      "disposition": "unchanged"
+    },
+    "src/data/patient_parsing.py": {
+      "source_sha256": "deb04ef8dc63143c1249082739d847f69c6f3bb35c6bd4ab6eb70f2471756b56",
+      "public_sha256": "deb04ef8dc63143c1249082739d847f69c6f3bb35c6bd4ab6eb70f2471756b56",
+      "disposition": "unchanged"
+    },
+    "src/data/patient_preprocessing.py": {
+      "source_sha256": "b31fcea8a751f25410af3709a13560903d910a96b564634ec319ed9e8db5eda8",
+      "public_sha256": "b31fcea8a751f25410af3709a13560903d910a96b564634ec319ed9e8db5eda8",
+      "disposition": "unchanged"
+    },
+    "src/data/population_statistics.py": {
+      "source_sha256": "cb3ec421b0d6449e949cfc5498ca90ee1e75e928eef80a704ae393b243bcb066",
+      "public_sha256": "cb3ec421b0d6449e949cfc5498ca90ee1e75e928eef80a704ae393b243bcb066",
+      "disposition": "unchanged"
+    },
+    "src/data/prior_bc_exclusions.py": {
+      "source_sha256": "ae4c3f4894b3c94fcea49b5941a4dc63ea50d28a2cefb1b0665c37f0b9bcf04c",
+      "public_sha256": "ae4c3f4894b3c94fcea49b5941a4dc63ea50d28a2cefb1b0665c37f0b9bcf04c",
+      "disposition": "unchanged"
+    },
+    "src/data/recent_diagnoses.py": {
+      "source_sha256": "5b3c4ecdb25066088a44b9bc6725b50babf906d127f4d0ad0df4df7c9196df35",
+      "public_sha256": "5b3c4ecdb25066088a44b9bc6725b50babf906d127f4d0ad0df4df7c9196df35",
+      "disposition": "unchanged"
+    },
+    "src/data/recurrence_blood_test_config.py": {
+      "source_sha256": "acd3a2a073f7e6c865397d7850f6afc5813682aaee8a41f21d610fd06be361a9",
+      "public_sha256": "acd3a2a073f7e6c865397d7850f6afc5813682aaee8a41f21d610fd06be361a9",
+      "disposition": "unchanged"
+    },
+    "src/data/recurrence_blood_test_display.py": {
+      "source_sha256": "d40a7168768a5d9b7c753d33e41356a0c9a0c672435eacb81ddf23dead723a76",
+      "public_sha256": "d40a7168768a5d9b7c753d33e41356a0c9a0c672435eacb81ddf23dead723a76",
+      "disposition": "unchanged"
+    },
+    "src/data/recurrence_blood_test_insights.py": {
+      "source_sha256": "4fc5998b1cc1d8b645c6e7e382756f6fd838cb4ebc3591432351eec06e978527",
+      "public_sha256": "4fc5998b1cc1d8b645c6e7e382756f6fd838cb4ebc3591432351eec06e978527",
+      "disposition": "unchanged"
+    },
+    "src/data/recurrence_blood_test_plot_config.py": {
+      "source_sha256": "c1760818a7023acb175bcfc6d0f4cd535af9e8cd3f6d25ac61a91e54b6daa47d",
+      "public_sha256": "c1760818a7023acb175bcfc6d0f4cd535af9e8cd3f6d25ac61a91e54b6daa47d",
+      "disposition": "unchanged"
+    },
+    "src/data/recurrence_blood_test_selection.py": {
+      "source_sha256": "58a17be12da1bf3629cb180937d4386d39ffe26abe2660ab062a88be242fcefd",
+      "public_sha256": "58a17be12da1bf3629cb180937d4386d39ffe26abe2660ab062a88be242fcefd",
+      "disposition": "unchanged"
+    },
+    "src/data/recurrence_measurement_history.py": {
+      "source_sha256": "668d1e286750822f4adcc3cafc7a5a7fa93d12b2c0934098dab165ec3b89a825",
+      "public_sha256": "668d1e286750822f4adcc3cafc7a5a7fa93d12b2c0934098dab165ec3b89a825",
+      "disposition": "unchanged"
+    },
+    "src/data/recurrence_reference_exchange.py": {
+      "source_sha256": "032e5a3faa48be2eff71317a6378f9b929836165ff8abb5487cfe4d01a03a9f1",
+      "public_sha256": "8b5f779588f0b25259a37da58e5c1f958c648082b5fe1551b6d9a0d4ca4745cb",
+      "disposition": "adapted"
+    },
+    "src/data/recurrence_reference_import.py": {
+      "source_sha256": "32bdae9807b9af1a3eaca43b4d38d64be4a4aa3200b67e5a5e237125cd66dba0",
+      "public_sha256": "32bdae9807b9af1a3eaca43b4d38d64be4a4aa3200b67e5a5e237125cd66dba0",
+      "disposition": "unchanged"
+    },
+    "src/data/recurrence_site_common.py": {
+      "source_sha256": "2c386d560336b37f071fa9f278b883ef0c7f90ceab3a13e24a3a25f3044ba1be",
+      "public_sha256": "2c386d560336b37f071fa9f278b883ef0c7f90ceab3a13e24a3a25f3044ba1be",
+      "disposition": "unchanged"
+    },
+    "src/data/recurrence_site_cumulative_incidence.py": {
+      "source_sha256": "25aeef64e2849ecf6fc85f9c4246e9de7a5b2a48440d89372e1a5dda9d089893",
+      "public_sha256": "25aeef64e2849ecf6fc85f9c4246e9de7a5b2a48440d89372e1a5dda9d089893",
+      "disposition": "unchanged"
+    },
+    "src/data/recurrence_site_incidence.py": {
+      "source_sha256": "b2157363ed5ac5e5ec371a0eec647ed6fffd44985ad643e4cde836c9fc89563c",
+      "public_sha256": "b2157363ed5ac5e5ec371a0eec647ed6fffd44985ad643e4cde836c9fc89563c",
+      "disposition": "unchanged"
+    },
+    "src/data/reference_intervals.py": {
+      "source_sha256": "d6d56eec7e0fe82816125c4a69b98b83335fa9c384c5952865319825265e7c0d",
+      "public_sha256": "d6d56eec7e0fe82816125c4a69b98b83335fa9c384c5952865319825265e7c0d",
+      "disposition": "unchanged"
+    },
+    "src/data/report_return_lookup.py": {
+      "source_sha256": "c96470e47fcb27b0740ab5fedc17cf338ee3fe9f88c979a5951441421f13b7b0",
+      "public_sha256": "c96470e47fcb27b0740ab5fedc17cf338ee3fe9f88c979a5951441421f13b7b0",
+      "disposition": "unchanged"
+    },
+    "src/data/sample_weighting.py": {
+      "source_sha256": "43fda0690c316d5b9ff9b297d4aa9a72c27f8f3538f8333cc864e5ffa5a77b6b",
+      "public_sha256": "43fda0690c316d5b9ff9b297d4aa9a72c27f8f3538f8333cc864e5ffa5a77b6b",
+      "disposition": "unchanged"
+    },
+    "src/data/survival_targets.py": {
+      "source_sha256": "3285e35eb441a9f598ebbd047285b4256081bbccfd9225a9538da444a0c70fc2",
+      "public_sha256": "3285e35eb441a9f598ebbd047285b4256081bbccfd9225a9538da444a0c70fc2",
+      "disposition": "unchanged"
+    },
+    "src/data/temporal_splits.py": {
+      "source_sha256": "77c8f0748c8bcd5e4326a18be0060d0611c9af6bc583231c3f9c2826c70a653e",
+      "public_sha256": "77c8f0748c8bcd5e4326a18be0060d0611c9af6bc583231c3f9c2826c70a653e",
+      "disposition": "unchanged"
+    },
+    "src/data/timing.py": {
+      "source_sha256": "d59e2716891236cf1fa7ee999e633ded01775061d8b149c88c57651affe49ac4",
+      "public_sha256": "d59e2716891236cf1fa7ee999e633ded01775061d8b149c88c57651affe49ac4",
+      "disposition": "unchanged"
+    },
+    "src/data/types.py": {
+      "source_sha256": "f4dcf1bceb8099662e8e0a10acef8d786325dfbef6879128d2c6c10f16eb525d",
+      "public_sha256": "f4dcf1bceb8099662e8e0a10acef8d786325dfbef6879128d2c6c10f16eb525d",
+      "disposition": "unchanged"
+    },
+    "src/figure_headings.py": {
+      "source_sha256": "da13f0340337df73fc7ec5b6b2df7baf5bab853a8c92442de1ed25c66846647d",
+      "public_sha256": "da13f0340337df73fc7ec5b6b2df7baf5bab853a8c92442de1ed25c66846647d",
+      "disposition": "unchanged"
+    },
+    "src/figure_style.py": {
+      "source_sha256": "8eff7bd042cebac19fdd6a9590a74bc32789d966930613e8cd973e016100e4b4",
+      "public_sha256": "8eff7bd042cebac19fdd6a9590a74bc32789d966930613e8cd973e016100e4b4",
+      "disposition": "unchanged"
+    },
+    "src/manual_age_summary.py": {
+      "source_sha256": "c12b66dd8b97bf875e576dd946e0f0565f953bc022ad817e8734b9e45d3b292c",
+      "public_sha256": "c12b66dd8b97bf875e576dd946e0f0565f953bc022ad817e8734b9e45d3b292c",
+      "disposition": "unchanged"
+    },
+    "src/model/__init__.py": {
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "unchanged"
+    },
+    "src/model/blood_test_change_imputation.py": {
+      "source_sha256": "a102862e4e50aa22aa998581033849fcada81828a94c081737825faa725ae5a3",
+      "public_sha256": "a102862e4e50aa22aa998581033849fcada81828a94c081737825faa725ae5a3",
+      "disposition": "unchanged"
+    },
+    "src/model/blood_test_imputation_statistics.py": {
+      "source_sha256": "6b75c6ec4465cef1b4d77779edc7f5ec6e05e81a254e78b2d247489d757d8000",
+      "public_sha256": "6b75c6ec4465cef1b4d77779edc7f5ec6e05e81a254e78b2d247489d757d8000",
+      "disposition": "unchanged"
+    },
+    "src/model/brier_diagnostics.py": {
+      "source_sha256": "e629d65fd2355e923479678367a7aafa05c82d8f5df25fa589252b936f7d4064",
+      "public_sha256": "e629d65fd2355e923479678367a7aafa05c82d8f5df25fa589252b936f7d4064",
+      "disposition": "unchanged"
+    },
+    "src/model/cause_specific_probability.py": {
+      "source_sha256": "ce9ef45f13926b449ef965aaf69b88b4114b7b37ad0ba25b1b77e43a1509b864",
+      "public_sha256": "ce9ef45f13926b449ef965aaf69b88b4114b7b37ad0ba25b1b77e43a1509b864",
+      "disposition": "unchanged"
+    },
+    "src/model/cindex_benchmark.py": {
+      "source_sha256": "739f49f93f7637838154099d8d6a0b62d7a08ed8b18ebae21cb45324eee369c2",
+      "public_sha256": "739f49f93f7637838154099d8d6a0b62d7a08ed8b18ebae21cb45324eee369c2",
+      "disposition": "unchanged"
+    },
+    "src/model/complete_case_brier.py": {
+      "source_sha256": "47af9537021bd6be8e1cfb329a0954f03a1f9a39b75d3b51a540a23628864524",
+      "public_sha256": "47af9537021bd6be8e1cfb329a0954f03a1f9a39b75d3b51a540a23628864524",
+      "disposition": "unchanged"
+    },
+    "src/model/ebm_bags.py": {
+      "source_sha256": "5a57ffad91ca79ee03e876afd64233746b8d9b6e08f35ffb8d884522c95c4e46",
+      "public_sha256": "5a57ffad91ca79ee03e876afd64233746b8d9b6e08f35ffb8d884522c95c4e46",
+      "disposition": "unchanged"
+    },
+    "src/model/ebm_benchmark_top_features.py": {
+      "source_sha256": "3916307ccd1205c23cd18f338492b7288a5b83be62f1d0ec9c9b6f99a8910eee",
+      "public_sha256": "3916307ccd1205c23cd18f338492b7288a5b83be62f1d0ec9c9b6f99a8910eee",
+      "disposition": "unchanged"
+    },
+    "src/model/ebm_config.py": {
+      "source_sha256": "11fb0a8142db92099e7ab0f3a7570a02560451b974688878e47117350d2f0dd7",
+      "public_sha256": "11fb0a8142db92099e7ab0f3a7570a02560451b974688878e47117350d2f0dd7",
+      "disposition": "unchanged"
+    },
+    "src/model/ebm_explanation_data.py": {
+      "source_sha256": "573771f6e072c5a9360c9a5366a9ca3fa736560a50ddf480e735552f4051f9ef",
+      "public_sha256": "573771f6e072c5a9360c9a5366a9ca3fa736560a50ddf480e735552f4051f9ef",
+      "disposition": "unchanged"
+    },
+    "src/model/ebm_explanation_tables.py": {
+      "source_sha256": "ba9eca626e92dc3d2550c9379a07f7f83a5cab8697a49e6cc3893466d4b3d49b",
+      "public_sha256": "ba9eca626e92dc3d2550c9379a07f7f83a5cab8697a49e6cc3893466d4b3d49b",
+      "disposition": "unchanged"
+    },
+    "src/model/ebm_fitting.py": {
+      "source_sha256": "c14b1196d3e6ec949108c38f60d21cb4e1f1d1b9962a3579bfca5be071fadbcb",
+      "public_sha256": "c14b1196d3e6ec949108c38f60d21cb4e1f1d1b9962a3579bfca5be071fadbcb",
+      "disposition": "unchanged"
+    },
+    "src/model/ebm_global_importance.py": {
+      "source_sha256": "b2ef3e87e9892e4408f73af2072360e6d7ecde1866dca242de04f1de06a8ed9b",
+      "public_sha256": "b2ef3e87e9892e4408f73af2072360e6d7ecde1866dca242de04f1de06a8ed9b",
+      "disposition": "unchanged"
+    },
+    "src/model/ebm_plotting_defaults.py": {
+      "source_sha256": "49b6e7aac9a213c83dfdc3dd82f638329c8a8e11fb8263fe8c9d0eb6ea745c55",
+      "public_sha256": "49b6e7aac9a213c83dfdc3dd82f638329c8a8e11fb8263fe8c9d0eb6ea745c55",
+      "disposition": "unchanged"
+    },
+    "src/model/ebm_visualizations.py": {
+      "source_sha256": "07eaf643759313efc8860e13f28d04aa66d4753cb5d8cde13fa0c59b6069b9fa",
+      "public_sha256": "07eaf643759313efc8860e13f28d04aa66d4753cb5d8cde13fa0c59b6069b9fa",
+      "disposition": "unchanged"
+    },
+    "src/model/imputation.py": {
+      "source_sha256": "b8de11c7de0b5f9adeb5ea1dd0f90f668afd6de91621af5a8e25d861ec65a44a",
+      "public_sha256": "b8de11c7de0b5f9adeb5ea1dd0f90f668afd6de91621af5a8e25d861ec65a44a",
+      "disposition": "unchanged"
+    },
+    "src/model/imputation_config.py": {
+      "source_sha256": "03e3725d8441ff4981cc2abe2dc270c9e5117f441fc9febf88c63deed8fef000",
+      "public_sha256": "03e3725d8441ff4981cc2abe2dc270c9e5117f441fc9febf88c63deed8fef000",
+      "disposition": "unchanged"
+    },
+    "src/model/imputation_metadata.py": {
+      "source_sha256": "519fe049531893e088277b9091309d43e7918dde761cc5cd454fd55233e36492",
+      "public_sha256": "519fe049531893e088277b9091309d43e7918dde761cc5cd454fd55233e36492",
+      "disposition": "unchanged"
+    },
+    "src/model/imputation_projection.py": {
+      "source_sha256": "4ab26816772371161dae8ea6acf79a6ad9663ee967d3caaef5b6c61013cabe07",
+      "public_sha256": "4ab26816772371161dae8ea6acf79a6ad9663ee967d3caaef5b6c61013cabe07",
+      "disposition": "unchanged"
+    },
+    "src/model/normal_range_plotting.py": {
+      "source_sha256": "3cf51d78896f3b53c14ebbf4b8f81473b64064425b595e37c20242ad8a5fd9de",
+      "public_sha256": "3cf51d78896f3b53c14ebbf4b8f81473b64064425b595e37c20242ad8a5fd9de",
+      "disposition": "unchanged"
+    },
+    "src/model/normal_ranges.py": {
+      "source_sha256": "0e9c14555bbb9ca7164f150bab85871c7e1b5d98997a7f5deb061752851e3532",
+      "public_sha256": "0e9c14555bbb9ca7164f150bab85871c7e1b5d98997a7f5deb061752851e3532",
+      "disposition": "unchanged"
+    },
+    "src/model/risk_score_calibration.py": {
+      "source_sha256": "32c7d89000df597bc9e63ca1789e98c9b5de45e6c3640195f3071735576faf9f",
+      "public_sha256": "32c7d89000df597bc9e63ca1789e98c9b5de45e6c3640195f3071735576faf9f",
+      "disposition": "unchanged"
+    },
+    "src/model/run_failure.py": {
+      "source_sha256": "e2cd32b06f12138434c1a33c700d41ce16ee5a9497289c0c2c7cc587851edcbe",
+      "public_sha256": "e2cd32b06f12138434c1a33c700d41ce16ee5a9497289c0c2c7cc587851edcbe",
+      "disposition": "unchanged"
+    },
+    "src/model/survival_evaluation.py": {
+      "source_sha256": "07fe8476251774ffc0da376e5a0b83dd71ad92af8e5c9fbe80ce1528405f7357",
+      "public_sha256": "07fe8476251774ffc0da376e5a0b83dd71ad92af8e5c9fbe80ce1528405f7357",
+      "disposition": "unchanged"
+    },
+    "src/model/survival_metrics.py": {
+      "source_sha256": "1f96b011460b909143c1d6610bc7924411bcdb6c1945e4a0b69f83a06f2fa811",
+      "public_sha256": "1f96b011460b909143c1d6610bc7924411bcdb6c1945e4a0b69f83a06f2fa811",
+      "disposition": "unchanged"
+    },
+    "src/model/temporal_risk.py": {
+      "source_sha256": "3470f18a3fe9223ad3e1769f7ffb1e0ba5aa0fea7975a032b0296cb476e927d9",
+      "public_sha256": "3470f18a3fe9223ad3e1769f7ffb1e0ba5aa0fea7975a032b0296cb476e927d9",
+      "disposition": "unchanged"
+    },
+    "src/regeneration/__init__.py": {
+      "source_sha256": "eeb4a88bfa8741990e1e9e99dff78bc6b0fb15199b878fdf71ab0fbcaaed51df",
+      "public_sha256": "eeb4a88bfa8741990e1e9e99dff78bc6b0fb15199b878fdf71ab0fbcaaed51df",
+      "disposition": "unchanged"
+    },
+    "src/regeneration/artifact_run.py": {
+      "source_sha256": "6763c50150e1bdf9c13c6b219e4ab2bea0ce3f5bb93f9a5bf06a589eaa22fcf4",
+      "public_sha256": "6763c50150e1bdf9c13c6b219e4ab2bea0ce3f5bb93f9a5bf06a589eaa22fcf4",
+      "disposition": "unchanged"
+    },
+    "src/regeneration/benchmark_table.py": {
+      "source_sha256": "ed2f4d68521ab55426196e15d6aa3e05ab15a43399fec6bc45036702a49fbacb",
+      "public_sha256": "ed2f4d68521ab55426196e15d6aa3e05ab15a43399fec6bc45036702a49fbacb",
+      "disposition": "unchanged"
+    },
+    "src/regeneration/cohort_reports.py": {
+      "source_sha256": "d47c2aaccf1f650097ddccc2feac50c3b0f19f288a9fb25b18500ba902b3cb62",
+      "public_sha256": "d47c2aaccf1f650097ddccc2feac50c3b0f19f288a9fb25b18500ba902b3cb62",
+      "disposition": "unchanged"
+    },
+    "src/regeneration/config.py": {
+      "source_sha256": "87e6e77c3c481f998ed68fc6cb33e23c3a5bb661fefe43a3368c278fd5320cc3",
+      "public_sha256": "87e6e77c3c481f998ed68fc6cb33e23c3a5bb661fefe43a3368c278fd5320cc3",
+      "disposition": "unchanged"
+    },
+    "src/regeneration/context.py": {
+      "source_sha256": "c13213922dfc6beec90ebde39f66293925adb4bec2d4d5997e49f71f25946669",
+      "public_sha256": "c13213922dfc6beec90ebde39f66293925adb4bec2d4d5997e49f71f25946669",
+      "disposition": "unchanged"
+    },
+    "src/regeneration/evaluation.py": {
+      "source_sha256": "35f7098a0a0c1a5ee003829064db43f845c13b4ce18408d24da5ad42825e6b61",
+      "public_sha256": "35f7098a0a0c1a5ee003829064db43f845c13b4ce18408d24da5ad42825e6b61",
+      "disposition": "unchanged"
+    },
+    "src/regeneration/importance.py": {
+      "source_sha256": "cf6608a19648455bc17905379f9a67a4f8403f6be5933f8b704f38b9c04fae7a",
+      "public_sha256": "cf6608a19648455bc17905379f9a67a4f8403f6be5933f8b704f38b9c04fae7a",
+      "disposition": "unchanged"
+    },
+    "src/regeneration/model_reports.py": {
+      "source_sha256": "abee4fd80a142e78b8f10d5ce2d8d8efd1856bcedde7bda4b60837aa19e34338",
+      "public_sha256": "abee4fd80a142e78b8f10d5ce2d8d8efd1856bcedde7bda4b60837aa19e34338",
+      "disposition": "unchanged"
+    },
+    "src/regeneration/paper_artifacts.py": {
+      "source_sha256": "b76c5ae4a5443827f37894dcd0536f5b7d23ec16ed0277bdcb7740f9a4e9821c",
+      "public_sha256": "b76c5ae4a5443827f37894dcd0536f5b7d23ec16ed0277bdcb7740f9a4e9821c",
+      "disposition": "unchanged"
+    },
+    "src/regeneration/paper_bundle.py": {
+      "source_sha256": "3b6ba5d1f1794b47e9d92dcf49678f7b2e84e8167be6d0aff358176c531daa60",
+      "public_sha256": "3b6ba5d1f1794b47e9d92dcf49678f7b2e84e8167be6d0aff358176c531daa60",
+      "disposition": "unchanged"
+    },
+    "src/regeneration/risk_reference.py": {
+      "source_sha256": "4d0231ef7ceea0b6c8b4839bd0f85a0c024a9ae58f1e5fddf5f42697c7b9a701",
+      "public_sha256": "85c72a73bf76a5b5f2509ca024d162ffaa2b6fffdb9ee12a24755da4da55d6e8",
+      "disposition": "adapted"
+    },
+    "src/regeneration/runner.py": {
+      "source_sha256": "8020d35a0984a028a675eb8e53ace668dc6d7296dc5413fb51c4f720a96930af",
+      "public_sha256": "8020d35a0984a028a675eb8e53ace668dc6d7296dc5413fb51c4f720a96930af",
+      "disposition": "unchanged"
+    },
+    "src/reporting.py": {
+      "source_sha256": "07f3a283c9563c2a9e270587ad75e5b7173782f4ac9817368c381f54cc47c7c1",
+      "public_sha256": "07f3a283c9563c2a9e270587ad75e5b7173782f4ac9817368c381f54cc47c7c1",
+      "disposition": "unchanged"
+    },
+    "src/script/__init__.py": {
+      "source_sha256": "ce80b458a43b41998de357eb7cb25373979b3632ffe3f5c97ecbdf0c77199b6d",
+      "public_sha256": "ce80b458a43b41998de357eb7cb25373979b3632ffe3f5c97ecbdf0c77199b6d",
+      "disposition": "unchanged"
+    },
+    "src/script/brier_bootstrap.py": {
+      "source_sha256": "08eef8be10578c6f51054e3ac657b4b7d64d5713be82989c69b7c57cd437c881",
+      "public_sha256": "08eef8be10578c6f51054e3ac657b4b7d64d5713be82989c69b7c57cd437c881",
+      "disposition": "unchanged"
+    },
+    "src/script/brier_diagnostics.py": {
+      "source_sha256": "2279aedb002ab38a4d1d17b6adeedbab586b2517aa25386843f4a914ce5c073a",
+      "public_sha256": "2279aedb002ab38a4d1d17b6adeedbab586b2517aa25386843f4a914ce5c073a",
+      "disposition": "unchanged"
+    },
+    "src/script/brier_model_artifacts.py": {
+      "source_sha256": "5826fd1cab5a8f55c5c5018dee2cd930750376f184762a770e906ce45adaff0e",
+      "public_sha256": "5826fd1cab5a8f55c5c5018dee2cd930750376f184762a770e906ce45adaff0e",
+      "disposition": "unchanged"
+    },
+    "src/script/brier_reporting.py": {
+      "source_sha256": "abff967a0822f940c9786958556fb6f460b2185dc38e56a49532dbfe576ad761",
+      "public_sha256": "abff967a0822f940c9786958556fb6f460b2185dc38e56a49532dbfe576ad761",
+      "disposition": "unchanged"
+    },
+    "src/script/calculate_recurrence_reference_percentages.py": {
+      "source_sha256": "361620de74dec2fdd516ee41cb9b1a0cfe5dc5b1e22b8a0819c818b656d07786",
+      "public_sha256": "361620de74dec2fdd516ee41cb9b1a0cfe5dc5b1e22b8a0819c818b656d07786",
+      "disposition": "unchanged"
+    },
+    "src/script/compact_paper_ebm_rows.py": {
+      "source_sha256": "78724ffd856f73455d3281d7f732f4c699cbe30d418139e6aeb2c7cb5b223b13",
+      "public_sha256": "78724ffd856f73455d3281d7f732f4c699cbe30d418139e6aeb2c7cb5b223b13",
+      "disposition": "unchanged"
+    },
+    "src/script/ebm_survival_config.py": {
+      "source_sha256": "b80102e4f1309c885b7ab833a5ba5f6d9476556d07208c9b65d77ac81d7125a4",
+      "public_sha256": "b80102e4f1309c885b7ab833a5ba5f6d9476556d07208c9b65d77ac81d7125a4",
+      "disposition": "unchanged"
+    },
+    "src/script/ebm_training_artifacts.py": {
+      "source_sha256": "85db7329909f167bb7c381f0d53ce1046ef2525c30a7eb964a084079b5408603",
+      "public_sha256": "85db7329909f167bb7c381f0d53ce1046ef2525c30a7eb964a084079b5408603",
+      "disposition": "unchanged"
+    },
+    "src/script/export_cohort_age_membership.py": {
+      "source_sha256": "bbdb197fadce38d43dd9fe00ce0862b36f3677b1c97740475360720b7a21b083",
+      "public_sha256": "bbdb197fadce38d43dd9fe00ce0862b36f3677b1c97740475360720b7a21b083",
+      "disposition": "unchanged"
+    },
+    "src/script/export_recurrence_blood_test_insights.py": {
+      "source_sha256": "a0e3a70b0a61ec977b2038acc3977e966c7e91434c36bf3827a7fb868fb7a9aa",
+      "public_sha256": "a0e3a70b0a61ec977b2038acc3977e966c7e91434c36bf3827a7fb868fb7a9aa",
+      "disposition": "unchanged"
+    },
+    "src/script/logging_config.py": {
+      "source_sha256": "b89a4d76b5df8af594cd215c0478b7f2c69176b5e0a13aac34b9852b00c4e14e",
+      "public_sha256": "b89a4d76b5df8af594cd215c0478b7f2c69176b5e0a13aac34b9852b00c4e14e",
+      "disposition": "unchanged"
+    },
+    "src/script/plot/blood_test_imputation_chart.py": {
+      "source_sha256": "a41f164953425821483bec78137c799bd09ca7202b550cb6072ae9be438421f4",
+      "public_sha256": "a41f164953425821483bec78137c799bd09ca7202b550cb6072ae9be438421f4",
+      "disposition": "unchanged"
+    },
+    "src/script/plot/cohort_composition_panels.py": {
+      "source_sha256": "a3877148e1aa63d2d39b5f561f38930d0644fbabdcf174724ad279087fdb75bd",
+      "public_sha256": "a3877148e1aa63d2d39b5f561f38930d0644fbabdcf174724ad279087fdb75bd",
+      "disposition": "unchanged"
+    },
+    "src/script/plot/dataset_statistics.py": {
+      "source_sha256": "b0f11df348198802af99d4d4447f414ec1b9694d763270d9f1161cdd5ff32163",
+      "public_sha256": "b0f11df348198802af99d4d4447f414ec1b9694d763270d9f1161cdd5ff32163",
+      "disposition": "unchanged"
+    },
+    "src/script/plot/dataset_statistics_config.py": {
+      "source_sha256": "55400b4e3dfe2ce40fd345308f27228f2e62c7503f2d3edb16e7314ba9ca0d64",
+      "public_sha256": "55400b4e3dfe2ce40fd345308f27228f2e62c7503f2d3edb16e7314ba9ca0d64",
+      "disposition": "unchanged"
+    },
+    "src/script/plot/ebm_reference_svg.py": {
+      "source_sha256": "2d3ab1aa5777d85782947a79bd461c6b88d436c76bec009a39a6a0e3ef6bbc76",
+      "public_sha256": "2d3ab1aa5777d85782947a79bd461c6b88d436c76bec009a39a6a0e3ef6bbc76",
+      "disposition": "unchanged"
+    },
+    "src/script/plot/overview_layout.py": {
+      "source_sha256": "8ffa4b6f18f1070c3f94f00233034561ce8a248a35634d9cb204b9ea6fcff75e",
+      "public_sha256": "8ffa4b6f18f1070c3f94f00233034561ce8a248a35634d9cb204b9ea6fcff75e",
+      "disposition": "unchanged"
+    },
+    "src/script/plot/overview_style.py": {
+      "source_sha256": "00e9043b345f363ec07609ff7ae689dbb08880d440dc1cb5908be20114acb206",
+      "public_sha256": "00e9043b345f363ec07609ff7ae689dbb08880d440dc1cb5908be20114acb206",
+      "disposition": "unchanged"
+    },
+    "src/script/plot/patient_flow_diagram.py": {
+      "source_sha256": "6f8477e39c6682247a5ae2cc8d36146e7dff027a4abaaaac50a190b731571a1b",
+      "public_sha256": "6f8477e39c6682247a5ae2cc8d36146e7dff027a4abaaaac50a190b731571a1b",
+      "disposition": "unchanged"
+    },
+    "src/script/plot/recurrence_blood_test_insights.py": {
+      "source_sha256": "1c46d1d6bea2343330326a3b0f7e17b9063d5824b876ab6d24b4c05e51107a1e",
+      "public_sha256": "1c46d1d6bea2343330326a3b0f7e17b9063d5824b876ab6d24b4c05e51107a1e",
+      "disposition": "unchanged"
+    },
+    "src/script/plot/recurrence_blood_test_panel.py": {
+      "source_sha256": "353b258bbb0b1d906cb1ab578aef0a6a60474b694559b4d7255f380513fb59da",
+      "public_sha256": "353b258bbb0b1d906cb1ab578aef0a6a60474b694559b4d7255f380513fb59da",
+      "disposition": "unchanged"
+    },
+    "src/script/plot/recurrence_reference_legend.py": {
+      "source_sha256": "4b1fcb51ea2f2af4e1dfec1417f626277f1251a09f83b88481de909795bc937e",
+      "public_sha256": "4b1fcb51ea2f2af4e1dfec1417f626277f1251a09f83b88481de909795bc937e",
+      "disposition": "unchanged"
+    },
+    "src/script/plot_temporal_risk.py": {
+      "source_sha256": "b7231c88fc2e3a14d506f182a4471e542ca68b38e77a19a3892da704764d0fd2",
+      "public_sha256": "b7231c88fc2e3a14d506f182a4471e542ca68b38e77a19a3892da704764d0fd2",
+      "disposition": "unchanged"
+    },
+    "src/script/recurrence_blood_test_reporting.py": {
+      "source_sha256": "2ce7261a186d812b951f0eaad37ad43982047c9837ada0bfe5bbc365643241c2",
+      "public_sha256": "2ce7261a186d812b951f0eaad37ad43982047c9837ada0bfe5bbc365643241c2",
+      "disposition": "unchanged"
+    },
+    "src/script/regenerate.py": {
+      "source_sha256": "027d5079f5b07a4708aa3f234ba6d4f7dcab09c761af1904a48ed5084541736b",
+      "public_sha256": "027d5079f5b07a4708aa3f234ba6d4f7dcab09c761af1904a48ed5084541736b",
+      "disposition": "unchanged"
+    },
+    "src/script/saved_ebm_artifacts.py": {
+      "source_sha256": "23a870c84fa0b7dc5be3bbb4eafc39e15777b6bf04baacc7822a65c37ee8e2dc",
+      "public_sha256": "23a870c84fa0b7dc5be3bbb4eafc39e15777b6bf04baacc7822a65c37ee8e2dc",
+      "disposition": "unchanged"
+    },
+    "src/script/single_bloodtest_benchmark_config.py": {
+      "source_sha256": "e9742a086ccbf70b5755f77371b9251aa1165268aba0f251000d670c675a9d5b",
+      "public_sha256": "e9742a086ccbf70b5755f77371b9251aa1165268aba0f251000d670c675a9d5b",
+      "disposition": "unchanged"
+    },
+    "src/script/single_bloodtest_benchmark_reporting.py": {
+      "source_sha256": "90cad94717903427fab72aaeb3c89eda1fca59b45550827afaf851043edc9441",
+      "public_sha256": "90cad94717903427fab72aaeb3c89eda1fca59b45550827afaf851043edc9441",
+      "disposition": "unchanged"
+    },
+    "src/script/single_bloodtest_brier.py": {
+      "source_sha256": "e0d1a5cbef4da006b788065b11bab2f8704d83d4822092d0666fde07132f3d85",
+      "public_sha256": "e0d1a5cbef4da006b788065b11bab2f8704d83d4822092d0666fde07132f3d85",
+      "disposition": "unchanged"
+    },
+    "src/script/single_bloodtest_ebm_top_features.py": {
+      "source_sha256": "d592a9cc54665448a2a4299c7956cc750e849987fbac805ff26609ea00c4fcab",
+      "public_sha256": "d592a9cc54665448a2a4299c7956cc750e849987fbac805ff26609ea00c4fcab",
+      "disposition": "unchanged"
+    },
+    "src/script/single_bloodtest_preparation.py": {
+      "source_sha256": "a06426ae37598453e9e7ef2951233599154b911c7efcd0c1c89b4fc0c6136ae4",
+      "public_sha256": "a06426ae37598453e9e7ef2951233599154b911c7efcd0c1c89b4fc0c6136ae4",
+      "disposition": "unchanged"
+    },
+    "src/script/single_bloodtest_washout.py": {
+      "source_sha256": "7da59af2cb610c77ea9ff493a2f3f356a2111e218c86f69c41d47a25d6b09403",
+      "public_sha256": "7da59af2cb610c77ea9ff493a2f3f356a2111e218c86f69c41d47a25d6b09403",
+      "disposition": "unchanged"
+    },
+    "src/script/single_bloodtest_washout_counts.py": {
+      "source_sha256": "363ecbc685ed597267d5b73ca97cac2680d3dbd38df920764aaf6b4f57ff4220",
+      "public_sha256": "363ecbc685ed597267d5b73ca97cac2680d3dbd38df920764aaf6b4f57ff4220",
+      "disposition": "unchanged"
+    },
+    "src/script/style_paper_ebm_legends.py": {
+      "source_sha256": "818db2899f458920dda125ececd1a0138fe91629892625b7f55b36aefde3f3ee",
+      "public_sha256": "818db2899f458920dda125ececd1a0138fe91629892625b7f55b36aefde3f3ee",
+      "disposition": "unchanged"
+    },
+    "src/script/style_paper_figures.py": {
+      "source_sha256": "012a297d63ed2bd899ecf80a7b5deb8550afd7d2d9ab505979773db018eadb83",
+      "public_sha256": "012a297d63ed2bd899ecf80a7b5deb8550afd7d2d9ab505979773db018eadb83",
+      "disposition": "unchanged"
+    },
+    "src/script/style_paper_reference_colors.py": {
+      "source_sha256": "ff0bab82e923a6d5356a3496d65a4e4d20901c9a842b0ae85dcc630262fc4151",
+      "public_sha256": "ff0bab82e923a6d5356a3496d65a4e4d20901c9a842b0ae85dcc630262fc4151",
+      "disposition": "unchanged"
+    },
+    "src/script/style_paper_trajectory_legends.py": {
+      "source_sha256": "1a5a344d67d252aba7618cc86b266549d7f0178627554aa8deafdbcac8e1ed91",
+      "public_sha256": "d1ebf5248e429215a0dac51109904962e3ca016cf98bcf030ce5235f34630878",
+      "disposition": "adapted"
+    },
+    "src/script/survival_benchmark_artifacts.py": {
+      "source_sha256": "81ae6a34f6c6dcfa85e1c7dc32822e95270e04a2427665b0af204a6fe06c9dac",
+      "public_sha256": "81ae6a34f6c6dcfa85e1c7dc32822e95270e04a2427665b0af204a6fe06c9dac",
+      "disposition": "unchanged"
+    },
+    "src/script/survival_benchmark_cache.py": {
+      "source_sha256": "47f446946e181bd52281f9bf584ba59410a642bccb93c38db47ad8b268b53de2",
+      "public_sha256": "47f446946e181bd52281f9bf584ba59410a642bccb93c38db47ad8b268b53de2",
+      "disposition": "unchanged"
+    },
+    "src/script/survival_dataset_artifacts.py": {
+      "source_sha256": "6bf17384b8c90b8774fdd3d2869a2652d1565dbf5cb1bea928772ed292dbceaf",
+      "public_sha256": "6bf17384b8c90b8774fdd3d2869a2652d1565dbf5cb1bea928772ed292dbceaf",
+      "disposition": "unchanged"
+    },
+    "src/script/survival_model_input.py": {
+      "source_sha256": "700462419165496328e84686ecfb4b98f2e47e69b7e0b0f5eadf185f7f739bb2",
+      "public_sha256": "700462419165496328e84686ecfb4b98f2e47e69b7e0b0f5eadf185f7f739bb2",
+      "disposition": "unchanged"
+    },
+    "src/script/survival_training.py": {
+      "source_sha256": "b858104ce22b74195064e183f0110a450254116f6aad289488aaa1cce661a7b9",
+      "public_sha256": "b858104ce22b74195064e183f0110a450254116f6aad289488aaa1cce661a7b9",
+      "disposition": "unchanged"
+    },
+    "src/script/train_single_bloodtest_benchmark.py": {
+      "source_sha256": "18eaea8e61a10f10fc6ada140a0c8170c742368b4733d8ab21de45f95a24874f",
+      "public_sha256": "6d0c94fd03dfe183201626f67fba7daf1a0d83031212daed794d4456e6e2e02e",
+      "disposition": "adapted"
+    },
+    "src/script/training_cohort_comparison.py": {
+      "source_sha256": "2cc87e6720a5760ada62fd470ae7d5ff450e3b26a9015c5e6559f0efa6af704f",
+      "public_sha256": "2cc87e6720a5760ada62fd470ae7d5ff450e3b26a9015c5e6559f0efa6af704f",
+      "disposition": "unchanged"
+    },
+    "src/script/training_dataset_statistics.py": {
+      "source_sha256": "c9d7103e352bfd3f65b040e459a559132cadba01547df56285544ffdf49a93ef",
+      "public_sha256": "c9d7103e352bfd3f65b040e459a559132cadba01547df56285544ffdf49a93ef",
+      "disposition": "unchanged"
+    },
+    "src/script/training_recurrence_blood_test_insights.py": {
+      "source_sha256": "e40f1a32c2a038ab548332324ca93052df54fa1588fcf61a938c2faf33a0ac7e",
+      "public_sha256": "e40f1a32c2a038ab548332324ca93052df54fa1588fcf61a938c2faf33a0ac7e",
+      "disposition": "unchanged"
+    },
+    "src/script/update_cohort_comparison.py": {
+      "source_sha256": "54eec25cd780eedce28a214d1e831db7d52b9e5871f248458df1f8a13a86eaff",
+      "public_sha256": "54eec25cd780eedce28a214d1e831db7d52b9e5871f248458df1f8a13a86eaff",
+      "disposition": "unchanged"
+    },
+    "src/script/validate_survival_model.py": {
+      "source_sha256": "1c6ba8285ea999d042f1b24420c9d2f99f51bab2b67add28bbf7025457c740e1",
+      "public_sha256": "1c6ba8285ea999d042f1b24420c9d2f99f51bab2b67add28bbf7025457c740e1",
+      "disposition": "unchanged"
+    },
+    "src/time_units.py": {
+      "source_sha256": "b9f1a3a357648cfbcb2d02633b45d76041764ee6af195d170e670f3ac76b83b1",
+      "public_sha256": "b9f1a3a357648cfbcb2d02633b45d76041764ee6af195d170e670f3ac76b83b1",
+      "disposition": "unchanged"
+    },
+    "test/conftest.py": {
+      "source_sha256": "c7d94ad29a72a6905d812969468ad6b98a9f245ad04362e26b18d1427cce4598",
+      "public_sha256": "c7d94ad29a72a6905d812969468ad6b98a9f245ad04362e26b18d1427cce4598",
+      "disposition": "unchanged"
+    },
+    "test/recurrence_statistics_oracles.py": {
+      "source_sha256": "43e6ffb3bdb5da6305225680fefeb7b95bd28a67f240dc241ca17fec336b9509",
+      "public_sha256": "43e6ffb3bdb5da6305225680fefeb7b95bd28a67f240dc241ca17fec336b9509",
+      "disposition": "unchanged"
+    },
+    "test/regeneration_helpers.py": {
+      "source_sha256": "5f6be3fa305911f27475119700d6049c4ba5a005d3fe1afa5f1f24922d62dc3f",
+      "public_sha256": "5f6be3fa305911f27475119700d6049c4ba5a005d3fe1afa5f1f24922d62dc3f",
+      "disposition": "unchanged"
+    },
+    "test/report_return_helpers.py": {
+      "source_sha256": "25fa272ec3199af5ecc475c6070669c37282c7bec3ecb3f96cd680074285b609",
+      "public_sha256": "25fa272ec3199af5ecc475c6070669c37282c7bec3ecb3f96cd680074285b609",
+      "disposition": "unchanged"
+    },
+    "test/test_benchmark_landmarks.py": {
+      "source_sha256": "0b658fa8ff7443de8c1aa5f951a849d5a0238df596cdf34b4697a6d1eeb7a369",
+      "public_sha256": "0b658fa8ff7443de8c1aa5f951a849d5a0238df596cdf34b4697a6d1eeb7a369",
+      "disposition": "unchanged"
+    },
+    "test/test_blood_test_change.py": {
+      "source_sha256": "2f8bfae9428d50327bc315bf55ac8247c660c9a141e351e888d866411ba1ff9f",
+      "public_sha256": "c06e52e62c74df13a4f778e6f2447184b2f7b6f6104b9873086d54e9ab0ea0d0",
+      "disposition": "adapted"
+    },
+    "test/test_blood_test_change_imputation.py": {
+      "source_sha256": "e7ed02dafa2dd526f361b72a1e4571a4f574fa8f14bddc881293c537f7839dc0",
+      "public_sha256": "cd04c0081e29a6a2d2309956b54be24fa2ad99805d404004b0d48bfef8a1935d",
+      "disposition": "adapted"
+    },
+    "test/test_blood_test_change_plots.py": {
+      "source_sha256": "5c26a850edc4ec04560bfa39b1a47ed34c82331dfdeedb9545da5e105febfc64",
+      "public_sha256": "1a7eb1e66e9b6dcdc7c20d507cd6e79255af5321eb624c2255ef44dab15cd29d",
+      "disposition": "adapted"
+    },
+    "test/test_blood_test_change_statistics.py": {
+      "source_sha256": "686406894270649645e5b111266b93b3892cab9a65eeb32751f9bf31a3453ca8",
+      "public_sha256": "686406894270649645e5b111266b93b3892cab9a65eeb32751f9bf31a3453ca8",
+      "disposition": "unchanged"
+    },
+    "test/test_blood_test_imputation_chart.py": {
+      "source_sha256": "948ebe412ec6592e31502d9a7f3d704bc0d80c956c00d16a23967bbc3c96cf22",
+      "public_sha256": "948ebe412ec6592e31502d9a7f3d704bc0d80c956c00d16a23967bbc3c96cf22",
+      "disposition": "unchanged"
+    },
+    "test/test_blood_test_imputation_statistics.py": {
+      "source_sha256": "b6f90e8aacd1e3940e7c62f0e55f9b45343c18673dd0cdeacb36ab18066f1952",
+      "public_sha256": "b6f90e8aacd1e3940e7c62f0e55f9b45343c18673dd0cdeacb36ab18066f1952",
+      "disposition": "unchanged"
+    },
+    "test/test_bootstrap_imputation_cache.py": {
+      "source_sha256": "3525f36c98b9fd3e2c95f37e42851aef03fb6e2ce92cd003fd324aaeef78fc46",
+      "public_sha256": "3525f36c98b9fd3e2c95f37e42851aef03fb6e2ce92cd003fd324aaeef78fc46",
+      "disposition": "unchanged"
+    },
+    "test/test_brier_benchmark.py": {
+      "source_sha256": "460b6ea63b3b1efaceaef3ba473aa41d4a2826a3ad376df0c868a91e7c5ccf2a",
+      "public_sha256": "460b6ea63b3b1efaceaef3ba473aa41d4a2826a3ad376df0c868a91e7c5ccf2a",
+      "disposition": "unchanged"
+    },
+    "test/test_brier_diagnostics.py": {
+      "source_sha256": "a03b74fc5426e389808251a28e744fcafade6c6410bb0a7ab01e6d519636e843",
+      "public_sha256": "a03b74fc5426e389808251a28e744fcafade6c6410bb0a7ab01e6d519636e843",
+      "disposition": "unchanged"
+    },
+    "test/test_brier_outcomes.py": {
+      "source_sha256": "880953b223b3a45a3302be1fa883cf0b9fb65706733358f8532dec8907107373",
+      "public_sha256": "880953b223b3a45a3302be1fa883cf0b9fb65706733358f8532dec8907107373",
+      "disposition": "unchanged"
+    },
+    "test/test_brier_reporting.py": {
+      "source_sha256": "96281f771ccbe80ada4446d312a8418ee555f0991ac5d0fd0cb33b0080512b83",
+      "public_sha256": "96281f771ccbe80ada4446d312a8418ee555f0991ac5d0fd0cb33b0080512b83",
+      "disposition": "unchanged"
+    },
+    "test/test_brier_risk_centering.py": {
+      "source_sha256": "3bbd3acefc6c268e67d68241195033883d741c47a7277363431c7a7506f2439f",
+      "public_sha256": "3bbd3acefc6c268e67d68241195033883d741c47a7277363431c7a7506f2439f",
+      "disposition": "unchanged"
+    },
+    "test/test_cohort_age_exchange.py": {
+      "source_sha256": "a306146936a27f5eef9e905e12d8c0a2abc127cb3cc670195718ee6737765f8c",
+      "public_sha256": "a306146936a27f5eef9e905e12d8c0a2abc127cb3cc670195718ee6737765f8c",
+      "disposition": "unchanged"
+    },
+    "test/test_cohort_comparison.py": {
+      "source_sha256": "27d7580a2b25a7de2c2f71cecd41cbaffdfb6d9834775e2218a6457c8408a00e",
+      "public_sha256": "27d7580a2b25a7de2c2f71cecd41cbaffdfb6d9834775e2218a6457c8408a00e",
+      "disposition": "unchanged"
+    },
+    "test/test_cohort_composition_figure.py": {
+      "source_sha256": "a0f58cebe062c808b3ba16aae7ecaf48bed0ea0b5d9603335fcecfa237eea7e1",
+      "public_sha256": "a0f58cebe062c808b3ba16aae7ecaf48bed0ea0b5d9603335fcecfa237eea7e1",
+      "disposition": "unchanged"
+    },
+    "test/test_competing_risk_probability.py": {
+      "source_sha256": "39f93e66c138e670617f125785e20629681207b90421171d5d22eb8b6174c74c",
+      "public_sha256": "39f93e66c138e670617f125785e20629681207b90421171d5d22eb8b6174c74c",
+      "disposition": "unchanged"
+    },
+    "test/test_dataset_logging.py": {
+      "source_sha256": "62098f6dee64ca4bb8a95f980aa20d2524ab17495a3e8d1fc21ac2aa29c9f05a",
+      "public_sha256": "62098f6dee64ca4bb8a95f980aa20d2524ab17495a3e8d1fc21ac2aa29c9f05a",
+      "disposition": "unchanged"
+    },
+    "test/test_dataset_statistics_config.py": {
+      "source_sha256": "6715f85010de7b421df9d073323a44edfdec77ec2e6502ade0fe9270a93ea877",
+      "public_sha256": "6715f85010de7b421df9d073323a44edfdec77ec2e6502ade0fe9270a93ea877",
+      "disposition": "unchanged"
+    },
+    "test/test_dataset_statistics_export.py": {
+      "source_sha256": "379e623bd3d877de4f4a1295c268e1da15098e1bd7d81f47d6c287ca068facdb",
+      "public_sha256": "379e623bd3d877de4f4a1295c268e1da15098e1bd7d81f47d6c287ca068facdb",
+      "disposition": "unchanged"
+    },
+    "test/test_dataset_statistics_source_config.py": {
+      "source_sha256": "df73ee8188a7075baf4feb990ca91d6bd99b54709bc3d22645c8631ebeeac067",
+      "public_sha256": "df73ee8188a7075baf4feb990ca91d6bd99b54709bc3d22645c8631ebeeac067",
+      "disposition": "unchanged"
+    },
+    "test/test_dataset_statistics_summary.py": {
+      "source_sha256": "d85955ac17d3a642da225254d70922799a5d857cb956914889838ee2c2250e20",
+      "public_sha256": "d85955ac17d3a642da225254d70922799a5d857cb956914889838ee2c2250e20",
+      "disposition": "unchanged"
+    },
+    "test/test_dataset_statistics_survival.py": {
+      "source_sha256": "3c4b919ff296c5d6542ecbc19a9114c298d343fa9378c01339dc523a6bbc8e23",
+      "public_sha256": "3c4b919ff296c5d6542ecbc19a9114c298d343fa9378c01339dc523a6bbc8e23",
+      "disposition": "unchanged"
+    },
+    "test/test_ebm_bags.py": {
+      "source_sha256": "71d450d3450e89b66f3dc9f72aad627496483c4f01684e7e0d3c79e23df1c6af",
+      "public_sha256": "71d450d3450e89b66f3dc9f72aad627496483c4f01684e7e0d3c79e23df1c6af",
+      "disposition": "unchanged"
+    },
+    "test/test_ebm_fitting.py": {
+      "source_sha256": "23636d4468745de958b727ff85cf41d2818d5a2b6a3efa3fb144b62465f66ba9",
+      "public_sha256": "23636d4468745de958b727ff85cf41d2818d5a2b6a3efa3fb144b62465f66ba9",
+      "disposition": "unchanged"
+    },
+    "test/test_ebm_importance_table.py": {
+      "source_sha256": "7941ed3d76540b087c88b07f87c8f5d5c04fcba90178f7bc8a9c5f1888698b4c",
+      "public_sha256": "7941ed3d76540b087c88b07f87c8f5d5c04fcba90178f7bc8a9c5f1888698b4c",
+      "disposition": "unchanged"
+    },
+    "test/test_ebm_reference_intervals.py": {
+      "source_sha256": "bbd71b03fd739bd47885958b86dcb8cda9db71d2667d8801d19bbc59b2b6eea7",
+      "public_sha256": "bbd71b03fd739bd47885958b86dcb8cda9db71d2667d8801d19bbc59b2b6eea7",
+      "disposition": "unchanged"
+    },
+    "test/test_ebm_survival_reporting.py": {
+      "source_sha256": "12c0c2d3527628909933483f5074e1db62f6092e36cbcb2fcdcea39eb025ebd6",
+      "public_sha256": "12c0c2d3527628909933483f5074e1db62f6092e36cbcb2fcdcea39eb025ebd6",
+      "disposition": "unchanged"
+    },
+    "test/test_ebm_training_artifacts.py": {
+      "source_sha256": "c6d3989ec46bd04bdf1e5cfc7ffb5bb45de07b86ab8a89d08460075fb0e4b730",
+      "public_sha256": "c6d3989ec46bd04bdf1e5cfc7ffb5bb45de07b86ab8a89d08460075fb0e4b730",
+      "disposition": "unchanged"
+    },
+    "test/test_ebm_visualizations.py": {
+      "source_sha256": "9f345c240a9ad32f62b166cec2a9df488a7a46dce2844ef17762f94e2e4f818f",
+      "public_sha256": "9f345c240a9ad32f62b166cec2a9df488a7a46dce2844ef17762f94e2e4f818f",
+      "disposition": "unchanged"
+    },
+    "test/test_eligible_patient_folds.py": {
+      "source_sha256": "8a8847f0970829ca41959e46c1810312314c16bc2907f076848736024ea82883",
+      "public_sha256": "8a8847f0970829ca41959e46c1810312314c16bc2907f076848736024ea82883",
+      "disposition": "unchanged"
+    },
+    "test/test_endpoint_extraction.py": {
+      "source_sha256": "0ca7879e36c119de119da96bfe1d1d9974fe2bf7f10a5accee54d8f69caf5d6b",
+      "public_sha256": "ddcb03db85d43c1224ca455a87f7713ad0ed74513837f4bc32ad4fc534d3fbe5",
+      "disposition": "adapted"
+    },
+    "test/test_endpoint_logging.py": {
+      "source_sha256": "a1732cf423a5a096476ef593c27fb7d83d9276c410e61af86462f399f950c788",
+      "public_sha256": "a1732cf423a5a096476ef593c27fb7d83d9276c410e61af86462f399f950c788",
+      "disposition": "unchanged"
+    },
+    "test/test_exact_signed_rank.py": {
+      "source_sha256": "84e1c2129caa428cefba25505e103ac7f9e0085d28fa339e761a3e2538470f0a",
+      "public_sha256": "84e1c2129caa428cefba25505e103ac7f9e0085d28fa339e761a3e2538470f0a",
+      "disposition": "unchanged"
+    },
+    "test/test_imputation.py": {
+      "source_sha256": "b7bac1811a626768030b00a1ba2702f934787540ebc950e584fce33e50dd2b09",
+      "public_sha256": "b7bac1811a626768030b00a1ba2702f934787540ebc950e584fce33e50dd2b09",
+      "disposition": "unchanged"
+    },
+    "test/test_imputation_projection.py": {
+      "source_sha256": "e7155e0cc895df4af906bf76ca88ebbeaac65ec9e4a4554e53de7b2aceec16b4",
+      "public_sha256": "1d183b3369ff0be321b7199c87c91b5071154180346fc441c18ffe4db1193091",
+      "disposition": "adapted"
+    },
+    "test/test_kaplan_meier.py": {
+      "source_sha256": "100f902b8ff4ed50916603921ed200d7133713ce3377af7df145f23620cebef7",
+      "public_sha256": "100f902b8ff4ed50916603921ed200d7133713ce3377af7df145f23620cebef7",
+      "disposition": "unchanged"
+    },
+    "test/test_landmark_event_counts.py": {
+      "source_sha256": "1efd7848046e928213377a8c6e203b96dfdaf2be8eeee3b40b5eb5b96f2ce544",
+      "public_sha256": "1efd7848046e928213377a8c6e203b96dfdaf2be8eeee3b40b5eb5b96f2ce544",
+      "disposition": "unchanged"
+    },
+    "test/test_landmark_time_since_diagnosis.py": {
+      "source_sha256": "4675dcd4c809f9dbee2a8d3709ce93af5de566e2b5347fedeea9bfc871e528ef",
+      "public_sha256": "4675dcd4c809f9dbee2a8d3709ce93af5de566e2b5347fedeea9bfc871e528ef",
+      "disposition": "unchanged"
+    },
+    "test/test_logging_config.py": {
+      "source_sha256": "087374c3e1283dca1b710371b700873c588f80573e401b21d21b2ba1be6506d5",
+      "public_sha256": "087374c3e1283dca1b710371b700873c588f80573e401b21d21b2ba1be6506d5",
+      "disposition": "unchanged"
+    },
+    "test/test_manual_age_summary.py": {
+      "source_sha256": "7eaf0b920d5a2ea1d15b35d248d2a326dd4c1428e547f2bedb5d137e0ce7ae10",
+      "public_sha256": "7eaf0b920d5a2ea1d15b35d248d2a326dd4c1428e547f2bedb5d137e0ce7ae10",
+      "disposition": "unchanged"
+    },
+    "test/test_min_landmark_day.py": {
+      "source_sha256": "b3ae1962ed56c54e6d52076ea86b0fcdf1e80a04c83163ae121c8aa419a794cd",
+      "public_sha256": "b3ae1962ed56c54e6d52076ea86b0fcdf1e80a04c83163ae121c8aa419a794cd",
+      "disposition": "unchanged"
+    },
+    "test/test_native_cox_weighting.py": {
+      "source_sha256": "006dc43b17cfaff04d1cd8adc1f7a2b3cb92a9a29cce6cae05f9e2a57c90ce49",
+      "public_sha256": "006dc43b17cfaff04d1cd8adc1f7a2b3cb92a9a29cce6cae05f9e2a57c90ce49",
+      "disposition": "unchanged"
+    },
+    "test/test_other_cancer_outcomes.py": {
+      "source_sha256": "4b5f66920ae99dfac9b6abbdfe12c0372d8863a73309c91d3557f2e91e0927e4",
+      "public_sha256": "4b5f66920ae99dfac9b6abbdfe12c0372d8863a73309c91d3557f2e91e0927e4",
+      "disposition": "unchanged"
+    },
+    "test/test_paper_bundle.py": {
+      "source_sha256": "746c2f37a1abe367f73d92808a34b9c0b6de0b3c8fbd1cd686121f0a30df1e01",
+      "public_sha256": "a7e0795b8c862f8e068896c53173389f3ad764449854aac4853d34c86b485d9f",
+      "disposition": "adapted"
+    },
+    "test/test_patient_bloodtest.py": {
+      "source_sha256": "dff5cc850d9310fb47df51cfa80927a220b5a62356809d8ed734961d71ca123a",
+      "public_sha256": "dff5cc850d9310fb47df51cfa80927a220b5a62356809d8ed734961d71ca123a",
+      "disposition": "unchanged"
+    },
+    "test/test_patient_flow_diagram.py": {
+      "source_sha256": "b50e0670e53e6494350305a97d0c667c6f6f3a06a53cd2ec046ce3467f157cb6",
+      "public_sha256": "b50e0670e53e6494350305a97d0c667c6f6f3a06a53cd2ec046ce3467f157cb6",
+      "disposition": "unchanged"
+    },
+    "test/test_population_statistics.py": {
+      "source_sha256": "616d1c06f4f311a3e82ec9965d631d6cc077e61f56c9c9f7879c7f8be3b2820d",
+      "public_sha256": "616d1c06f4f311a3e82ec9965d631d6cc077e61f56c9c9f7879c7f8be3b2820d",
+      "disposition": "unchanged"
+    },
+    "test/test_post_recurrence_survival.py": {
+      "source_sha256": "2958228aca13fbb62adaa4490da37cf276835a85030d5495bb250f8085d1da31",
+      "public_sha256": "2958228aca13fbb62adaa4490da37cf276835a85030d5495bb250f8085d1da31",
+      "disposition": "unchanged"
+    },
+    "test/test_publication_style.py": {
+      "source_sha256": "7cb37c1da7e82151eda82e5be6dfd33292eb2e79aa6e588f091519c4d89ae4f2",
+      "public_sha256": "d7c6b8e55df17fddccdc61eed975a9f63e508797daca7c50d0b1ddde1bc8992a",
+      "disposition": "adapted"
+    },
+    "test/test_recurrence_blood_test_insights.py": {
+      "source_sha256": "c94040070e29f88f51a057bacbecd43634f7ad279133199e57b1ee4a2840e961",
+      "public_sha256": "42cdb7feb851f3d0fc40c643e36e18f3973ef08408ce45a08d4389f17ebe52b7",
+      "disposition": "adapted"
+    },
+    "test/test_recurrence_blood_test_overall.py": {
+      "source_sha256": "9049a0cd1fbd8a1784b4b2736238359a221a88196def61443c5f9de1d6ddcfa8",
+      "public_sha256": "f58bf223b80536be9324b7bd8ca6da8c193544e01216fb36832ea88db55f1293",
+      "disposition": "adapted"
+    },
+    "test/test_recurrence_blood_test_plot.py": {
+      "source_sha256": "4e811a6005fd72e4f84590507c1ceecb9c424aaf0fc6d110fecbeae29429aa9b",
+      "public_sha256": "4e811a6005fd72e4f84590507c1ceecb9c424aaf0fc6d110fecbeae29429aa9b",
+      "disposition": "unchanged"
+    },
+    "test/test_recurrence_blood_test_selection.py": {
+      "source_sha256": "9f837e98af59d2d427aeed8b2ec0cb73478717fb1de4f121963e22ff7805d9e9",
+      "public_sha256": "9f837e98af59d2d427aeed8b2ec0cb73478717fb1de4f121963e22ff7805d9e9",
+      "disposition": "unchanged"
+    },
+    "test/test_recurrence_code_matching.py": {
+      "source_sha256": "01c7839833ea438cf92f1528119324881e16538e9cf7952e6ae41951241413b3",
+      "public_sha256": "f038be7d2eea20e92396be8b06baeaafeca50513930974f2772df5ecf8ecda8d",
+      "disposition": "adapted"
+    },
+    "test/test_recurrence_day.py": {
+      "source_sha256": "f896544639657c2e32190e02e3ffbb2ea2f814126ba82d6e62d189d3964c968d",
+      "public_sha256": "49276721491c3bcf20ee22196465de2d07f37479b2e2e9a7d83e4995888a5523",
+      "disposition": "adapted"
+    },
+    "test/test_recurrence_figure_consistency.py": {
+      "source_sha256": "48d330b1e7a76ffab1276b138b9135bab609c19ee7cd28ba2f08f01622036dc8",
+      "public_sha256": "5e387200f0c3a1cf0ebdc25b0f5d4068aeb47423606f82f8a847cdeb08dcc1a9",
+      "disposition": "adapted"
+    },
+    "test/test_recurrence_reference_diagnostics.py": {
+      "source_sha256": "3c8550b577ceec74a335d5d9a9cf8fd2818ab2e031a719c1cc18c20fe58c3ad5",
+      "public_sha256": "3c8550b577ceec74a335d5d9a9cf8fd2818ab2e031a719c1cc18c20fe58c3ad5",
+      "disposition": "unchanged"
+    },
+    "test/test_recurrence_reference_exchange.py": {
+      "source_sha256": "f24148007773ff31363faf1908eec0bf7301b46eb213d5daf0852d604e4337ee",
+      "public_sha256": "f24148007773ff31363faf1908eec0bf7301b46eb213d5daf0852d604e4337ee",
+      "disposition": "unchanged"
+    },
+    "test/test_recurrence_reference_identity.py": {
+      "source_sha256": "6fbd6399bf136c6552a5872590d8fbe8017954c7d99de74e9c271d6c62f44545",
+      "public_sha256": "6fbd6399bf136c6552a5872590d8fbe8017954c7d99de74e9c271d6c62f44545",
+      "disposition": "unchanged"
+    },
+    "test/test_recurrence_reference_local.py": {
+      "source_sha256": "9ba263d6616a1515e2d7681612e4137b789700f92954fcc93a4b6d8d32c3f7e7",
+      "public_sha256": "9ba263d6616a1515e2d7681612e4137b789700f92954fcc93a4b6d8d32c3f7e7",
+      "disposition": "unchanged"
+    },
+    "test/test_recurrence_reference_scores.py": {
+      "source_sha256": "d851dd9aea88bd11a40f8d656f60c47f4393647b3aabe8d105e698247e383c38",
+      "public_sha256": "d851dd9aea88bd11a40f8d656f60c47f4393647b3aabe8d105e698247e383c38",
+      "disposition": "unchanged"
+    },
+    "test/test_recurrence_reference_statistics.py": {
+      "source_sha256": "307ea6e492145986a2b8795c89a17c4f498d6d567d7ad85d700fc809006c228f",
+      "public_sha256": "307ea6e492145986a2b8795c89a17c4f498d6d567d7ad85d700fc809006c228f",
+      "disposition": "unchanged"
+    },
+    "test/test_recurrence_site_figures.py": {
+      "source_sha256": "867e6128f91cc09706f1f7fa8a5b2cf357129d41c7db2dd046fe46749db96a46",
+      "public_sha256": "867e6128f91cc09706f1f7fa8a5b2cf357129d41c7db2dd046fe46749db96a46",
+      "disposition": "unchanged"
+    },
+    "test/test_recurrence_site_incidence.py": {
+      "source_sha256": "c743c2ac02fc62ffc7d98dd213b9e2ff507ad8bab54bf2d9c3a30422498bd3aa",
+      "public_sha256": "c743c2ac02fc62ffc7d98dd213b9e2ff507ad8bab54bf2d9c3a30422498bd3aa",
+      "disposition": "unchanged"
+    },
+    "test/test_recurrence_statistics_independent.py": {
+      "source_sha256": "cc69d93bccaaafa2c42cd5d454a253c35cb6dd7b579b723ad6f63491cb1622b0",
+      "public_sha256": "cc69d93bccaaafa2c42cd5d454a253c35cb6dd7b579b723ad6f63491cb1622b0",
+      "disposition": "unchanged"
+    },
+    "test/test_regenerate_ebm_explanations.py": {
+      "source_sha256": "85d5ac57a5d34fca7adb161e9992c4e58dfec42fee714bab5505ff6076a50ef2",
+      "public_sha256": "85d5ac57a5d34fca7adb161e9992c4e58dfec42fee714bab5505ff6076a50ef2",
+      "disposition": "unchanged"
+    },
+    "test/test_regenerate_single_bloodtest_benchmark_table.py": {
+      "source_sha256": "3be367955f21d9aa1403c322a63eaccefad0fdef1bed28920923ed41ee764c3e",
+      "public_sha256": "3be367955f21d9aa1403c322a63eaccefad0fdef1bed28920923ed41ee764c3e",
+      "disposition": "unchanged"
+    },
+    "test/test_regeneration.py": {
+      "source_sha256": "862f45f62f7505eaa4daec331d1872fb79653d831da578ddff4daa7d5b93a825",
+      "public_sha256": "862f45f62f7505eaa4daec331d1872fb79653d831da578ddff4daa7d5b93a825",
+      "disposition": "unchanged"
+    },
+    "test/test_regeneration_pipeline.py": {
+      "source_sha256": "0fe63e903e29ea1f97ccd6006ba301b98f1a64546643e9ed09cbac49ce1937e0",
+      "public_sha256": "0fe63e903e29ea1f97ccd6006ba301b98f1a64546643e9ed09cbac49ce1937e0",
+      "disposition": "unchanged"
+    },
+    "test/test_report_return_lookup.py": {
+      "source_sha256": "28b756ad249989e6d67ca5476c3516bc6bc06e390208b7814c64fdc22a2b47c0",
+      "public_sha256": "28b756ad249989e6d67ca5476c3516bc6bc06e390208b7814c64fdc22a2b47c0",
+      "disposition": "unchanged"
+    },
+    "test/test_risk_score_calibration.py": {
+      "source_sha256": "873d204f3c6bbbfe88816e2fb5e302eec2554d2fed11a08c64240259149682e6",
+      "public_sha256": "873d204f3c6bbbfe88816e2fb5e302eec2554d2fed11a08c64240259149682e6",
+      "disposition": "unchanged"
+    },
+    "test/test_sample_weighting.py": {
+      "source_sha256": "d9835b9298b5b1452171a225c1da038766fc660085cb000564f9929822e67dbc",
+      "public_sha256": "d9835b9298b5b1452171a225c1da038766fc660085cb000564f9929822e67dbc",
+      "disposition": "unchanged"
+    },
+    "test/test_saved_artifact_loading.py": {
+      "source_sha256": "5592e6aa9a0437a310527e2011d75c2dc56c9f6e01b9cd45f25ac8618e4881d6",
+      "public_sha256": "c8a0323319b6713dc64a88bfa4de0e4a9a311479bc584ff732fcedfdc4e58e75",
+      "disposition": "adapted"
+    },
+    "test/test_single_bloodtest_benchmark.py": {
+      "source_sha256": "abe993aebc6df0e557cadf02f1c8db0f4230beb732327b8cde19edc96bd5ed0e",
+      "public_sha256": "abe993aebc6df0e557cadf02f1c8db0f4230beb732327b8cde19edc96bd5ed0e",
+      "disposition": "unchanged"
+    },
+    "test/test_single_bloodtest_benchmark_reporting.py": {
+      "source_sha256": "7a644249b96cdd4f89bb75b72628c8521aa5774502d8c699d9cf2f224d805805",
+      "public_sha256": "7a644249b96cdd4f89bb75b72628c8521aa5774502d8c699d9cf2f224d805805",
+      "disposition": "unchanged"
+    },
+    "test/test_single_bloodtest_ebm_top_features.py": {
+      "source_sha256": "3751f906b3b308ae68bd8d63733f6fdd31b857e8b81dfc395a8765e544ae4efd",
+      "public_sha256": "3751f906b3b308ae68bd8d63733f6fdd31b857e8b81dfc395a8765e544ae4efd",
+      "disposition": "unchanged"
+    },
+    "test/test_single_bloodtest_preparation.py": {
+      "source_sha256": "063b10ef43bbab8faaba92429c2dc77423da626b367d1b18a139ce8d70f32ca0",
+      "public_sha256": "063b10ef43bbab8faaba92429c2dc77423da626b367d1b18a139ce8d70f32ca0",
+      "disposition": "unchanged"
+    },
+    "test/test_single_bloodtest_washout.py": {
+      "source_sha256": "fc9c43a8bf419436deb0220d49f67b6afe73f0cae86765a66f2e330fb71be5de",
+      "public_sha256": "fc9c43a8bf419436deb0220d49f67b6afe73f0cae86765a66f2e330fb71be5de",
+      "disposition": "unchanged"
+    },
+    "test/test_single_bloodtest_washout_counts.py": {
+      "source_sha256": "8e05a3a34f651a83ee6c12e6eb3fce56f4bfa7f75ffb7bc7f2e8c0d8d398a60b",
+      "public_sha256": "8e05a3a34f651a83ee6c12e6eb3fce56f4bfa7f75ffb7bc7f2e8c0d8d398a60b",
+      "disposition": "unchanged"
+    },
+    "test/test_source_follow_up.py": {
+      "source_sha256": "de9be57f7728bea694473406c85e340644334af69d15e9b6739254040a5117eb",
+      "public_sha256": "de9be57f7728bea694473406c85e340644334af69d15e9b6739254040a5117eb",
+      "disposition": "unchanged"
+    },
+    "test/test_source_safeguards.py": {
+      "source_sha256": "3ebdc5aafe9666ebe6ebfb7a2f7d5b6f517f748b5b31f8a9ea3e58c2ee00cb98",
+      "public_sha256": "8bb8ae9eaa89b48844d7abcf821bb2bba52d277578ec3cb11f6164d59256893a",
+      "disposition": "adapted"
+    },
+    "test/test_sparse_analysis_history.py": {
+      "source_sha256": "93dc9554b76cad0e1b62e8cb396a346030a59035fae5d3e4e8f7b380e76e0f6f",
+      "public_sha256": "93dc9554b76cad0e1b62e8cb396a346030a59035fae5d3e4e8f7b380e76e0f6f",
+      "disposition": "unchanged"
+    },
+    "test/test_study_model_measurements.py": {
+      "source_sha256": "7383d9173730d4eda79ad4e80ee20b7fda36205655a2075c2b7e6fb64bd30aa6",
+      "public_sha256": "7a0b42a4e2adff0a09d00ffa8f864fcc489363f5b56df511f15d99c24b038486",
+      "disposition": "adapted"
+    },
+    "test/test_survival_benchmark_artifacts.py": {
+      "source_sha256": "e729c39d173a166a8522e1897d7f63cdeda8c8f486071db4f20167e00c7c6614",
+      "public_sha256": "e729c39d173a166a8522e1897d7f63cdeda8c8f486071db4f20167e00c7c6614",
+      "disposition": "unchanged"
+    },
+    "test/test_survival_bootstrap_reuse.py": {
+      "source_sha256": "90b8dfebf6777240bb4e88ce95cb381f14c5bdebcfb50af8ab52716117ffcf24",
+      "public_sha256": "90b8dfebf6777240bb4e88ce95cb381f14c5bdebcfb50af8ab52716117ffcf24",
+      "disposition": "unchanged"
+    },
+    "test/test_survival_metrics.py": {
+      "source_sha256": "744e486d1464f48394967ef53aca7970c74571a1920e859d3bcf073166f731d6",
+      "public_sha256": "744e486d1464f48394967ef53aca7970c74571a1920e859d3bcf073166f731d6",
+      "disposition": "unchanged"
+    },
+    "test/test_survival_targets.py": {
+      "source_sha256": "5f3eeee3506e844ea61090f1fa98e09a8aa2879f5f9eba0e6afd3b048d9772fa",
+      "public_sha256": "5f3eeee3506e844ea61090f1fa98e09a8aa2879f5f9eba0e6afd3b048d9772fa",
+      "disposition": "unchanged"
+    },
+    "test/test_survival_training.py": {
+      "source_sha256": "3889b68b6a7c1ece77edfb21430679aee1884ee8045251df2ff156f76723788d",
+      "public_sha256": "3889b68b6a7c1ece77edfb21430679aee1884ee8045251df2ff156f76723788d",
+      "disposition": "unchanged"
+    },
+    "test/test_temporal_risk.py": {
+      "source_sha256": "0aad8a4a193aa58767250aedf95739d4859609c9946e147429a4b14685686098",
+      "public_sha256": "0aad8a4a193aa58767250aedf95739d4859609c9946e147429a4b14685686098",
+      "disposition": "unchanged"
+    },
+    "test/test_training_landmark_event_counts.py": {
+      "source_sha256": "a2b91ab32cdc072f09977da7d97203e4d91e4cf3103b4e6eb3f9a82e636dba43",
+      "public_sha256": "a2b91ab32cdc072f09977da7d97203e4d91e4cf3103b4e6eb3f9a82e636dba43",
+      "disposition": "unchanged"
+    },
+    "test/test_training_recurrence_blood_test_insights.py": {
+      "source_sha256": "ff475d44d5a18249c4b16041517f24a17c9144deb6b257fc2779b167bf13082d",
+      "public_sha256": "ff475d44d5a18249c4b16041517f24a17c9144deb6b257fc2779b167bf13082d",
+      "disposition": "unchanged"
+    },
+    "test/test_training_risk_reference.py": {
+      "source_sha256": "ff7b3ae02752ad78e08ecbe0ece97acdc53cebfc3217cf52283226fe4d55cce5",
+      "public_sha256": "ff7b3ae02752ad78e08ecbe0ece97acdc53cebfc3217cf52283226fe4d55cce5",
+      "disposition": "unchanged"
+    },
+    "test/test_validate_survival_model.py": {
+      "source_sha256": "a62ecf0b15f42de18972b46b41dcccb94b89669b3bbfcacc2b7a3bb179acc1c2",
+      "public_sha256": "a62ecf0b15f42de18972b46b41dcccb94b89669b3bbfcacc2b7a3bb179acc1c2",
+      "disposition": "unchanged"
+    },
+    "test/test_washout_bootstrap_size.py": {
+      "source_sha256": "409908b3d117e625b2dee1ead9214cf41087ab4f21bee279dc1ca8fb32aa8ddc",
+      "public_sha256": "409908b3d117e625b2dee1ead9214cf41087ab4f21bee279dc1ca8fb32aa8ddc",
+      "disposition": "unchanged"
+    }
+  },
+  "new_source_and_test_files": [
+    "src/config/demo.yml",
+    "src/config/hyperparameters_table.tex",
+    "src/config/laboratory_reference_table.tex",
+    "src/config/manuscript_inventory.json",
+    "src/config/manuscript_reference.json",
+    "src/config/performance_table.tex",
+    "src/config/performance_table_captions.json",
+    "src/config/synthetic.yml",
+    "src/extraction/__init__.py",
+    "src/extraction/blood.py",
+    "src/extraction/diagnoses.py",
+    "src/extraction/endpoints.py",
+    "src/extraction/splits.py",
+    "src/fixed_config_paths.py",
+    "src/paths.py",
+    "src/reproduction.py",
+    "src/script/calculate_reference_returns.py",
+    "src/script/capture_environment.py",
+    "src/script/extract_data.py",
+    "src/script/generate_synthetic_data.py",
+    "src/script/plot/trajectory_svg_legends.py",
+    "src/script/render_paper.py",
+    "src/script/run_demo.py",
+    "src/script/style_paper_tables.py",
+    "src/script/supplementary_tables.py",
+    "src/script/verify_reproduction.py",
+    "test/test_public_workflow.py",
+    "test/test_reproduction.py"
+  ],
+  "extraction_notebook_sha256": {
+    "01_endpoints.ipynb": "2c84d6389f5449f9e2edc55f47a21a72ba669023aed8abe24e8c73fa426e8e23",
+    "02_blood_samples.ipynb": "9c6767829d8a4b96d072676367a86a10ef695215254c006a3a921d9de4284044",
+    "03_data_split.ipynb": "950f4b709c8e75b38060673b3d1db7b3577905abfe5f1637ff8fbf9db5937240",
+    "04_bc_diagnosis_days.ipynb": "718c9b6b8944c10c908481f7cc36e2cc6087ef3646cd4a6136bd0257e87938f7"
+  },
+  "license": {
+    "source": "https://github.com/Ahus-AIM/Open-ECG-Digitizer/blob/main/LICENSE",
+    "spdx": "CC-BY-SA-4.0",
+    "sha256": "a1fdc6cdcf6bf2e6c0059da8f87108c7003fd7d1a2093179e7cb5767c7c6876b"
+  }
+}

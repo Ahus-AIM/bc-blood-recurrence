@@ -1,0 +1,25 @@
+manuscript:
+  text_height_tex_pt: 765.37949
+  title_gap_pdf_pt: 3.0
+ebm_rows:
+  gap_fraction: 0.7
+  minimum_gap_pdf_pt: 2.0
+placements:
+  ebm_top_features:
+    width: 0.48
+    height: null
+  recurrence_blood_test_trajectories:
+    width: 0.96
+    height: null
+  recurrence_blood_test_trajectories_any:
+    width: 1.0
+    height: 0.8
+  recurrence_blood_test_trajectories_*:
+    width: 1.0
+    height: 0.95
+  global_importance*:
+    width: 1.0
+    height: 0.8
+  terms_hazard_ratio_grid*:
+    width: 1.0
+    height: 0.8

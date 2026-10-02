@@ -1,0 +1,13 @@
+{
+  "patient_columns": {
+    "id": "id",
+    "birth_date": "birth date",
+    "diagnosis_date": "day of first bc diagnosis"
+  },
+  "date_formats": {
+    "birth_date": "%Y-%m-%d",
+    "diagnosis_date": "%Y-%m-%d"
+  },
+  "patients_separator": ",",
+  "patients_encoding": "utf-8-sig"
+}
